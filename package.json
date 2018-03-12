@@ -1,0 +1,23 @@
+{
+  "name": "quotender",
+  "version": "1.0.0",
+  "description": "quotender php project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beykar/Quotender.git"
+  },
+  "keywords": [
+    "quotender",
+    "node.js"
+  ],
+  "author": "training dragon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beykar/Quotender/issues"
+  },
+  "homepage": "https://github.com/Beykar/Quotender#readme"
+}
