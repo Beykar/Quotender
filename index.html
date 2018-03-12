@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+
+    <!-- mobile metatags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="build/imgs/head_imgs/logo.png" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quotender</title>
+
+    <!--/bootstrap css-->
+    <link rel="stylesheet"
+          href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+
+    <!--/fonts-->
+    <link rel="stylesheet" href="bower_components/gotham-fonts/fonts/">
+
+    <!--css main-->
+    <link rel="stylesheet" href="build/css/style.css" media="screen">
+
 </head>
 <body>
+    <div id="wrapper">
+        <header>
 
+            <nav class="nav navbar navbar-default navbar-fixed-top" id="topNav">
+                <div class="container">
+
+                    <div class="navbar-header">
+
+                        <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="burger">
+                            <div id="nav-icon1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!--/nav-icon1-->
+                        </div><!--/navbar-toggle-->
+
+                        <div class="navbar-brand" >
+                            <img class="img-responsive" id="logoQuote" src="build/imgs/head_imgs/logo.png" alt="Logo of Quotender">
+                        </div><!--/navbar-brand-->
+
+
+                    </div><!--/navbar-header-->
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right text-uppercase" id="navList">
+                            <li><a class="nav-links">Home</a></li>
+                            <li><a class="nav-links">About Quotender</a></li>
+                            <li><a class="nav-links">Contact</a></li>
+                            <li><a class="tel-Link">020 7624 3556</a></li>
+                        </ul><!--/nav navbar-nav navbar-right-->
+                    </div><!--/navbar-collapse collapse-->
+                </div><!--/container-->
+            </nav><!--/topNav-->
+
+            <div id="headBackground">
+                <div id="freeQuote">
+                    <div class="container">
+                        <div id="innerFreeQuote" class="text-center">
+                            <h2 class="text-uppercase">get a free quote</h2>
+
+                            <form type="submit" id="searchQuote" action="#">
+                                <div class="flexBox">
+                                    <label for="search"></label>
+                                    <input type="text" class="searchBox" name="search" id="search">
+                                    <input type="submit" class="btn submitBtn">
+                                </div><!--/flexBox-->
+                            </form><!--/searchQuote-->
+                            <div id="scrollMouse"><img src="build/imgs/head_imgs/MOUSE.png" alt="scroll mouse"></div><!--/scrollMouse-->
+
+                        </div><!--/innerFreeQuote-->
+                    </div><!--/container-->
+                </div><!--/freeQuote-->
+
+            </div><!--/headBackground-->
+
+        </header>
+
+        <main>
+
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <!--/ jquery script-->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!--/ bootstrap js script-->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--/ js script-->
+        <script src="build/js/script.js"></script>
+    </div><!--/wrapper-->
 </body>
 </html>

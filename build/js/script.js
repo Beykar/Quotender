@@ -1,3 +1,15 @@
-/**
- * Created by TD11 on 12/03/2018.
- */
+( () => {
+
+ let
+
+
+
+
+
+
+  init = () => {
+
+  }; //init
+
+  window.addEventListener("load", init);
+})();
