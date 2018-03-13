@@ -411,18 +411,34 @@ Media Queries
   margin-top: 1%;
 }
 
+.blockQuote {
+  margin-top: -2%;
+}
+
 blockquote {
   border: none;
 }
 .blockQuoteH3{
-  margin-top: -90px;
-  text-align: justify;
+  margin-top: -12%;
+  text-align: left;
+}
+
+.rateDivContainer {
+  display: flex;
+  margin-left: 13px;
 }
 
 .emptyStar{
   background-image: url("../imgs/test_section/star-empty.svg");
-  width:10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+}
+.fullStar {
+  background-image: url("../imgs/test_section/star-full.svg");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
 }
 /*
 .rating-container .star {
