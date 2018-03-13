@@ -1,10 +1,21 @@
 /***************
 General
 ***************/
-@font-face {
+
+/*********** SCSS VARIABLES *******/
+
+$font-src:url("../fonts/Gotham Fonts Family");
+$hCol:#303937;
+
+
+/*********** END OF SCSS VARIABLES *******/
+
+
+
+/*font-face@font-face {
   font-family: "Gotham Black";
-  src: url("../fonts/Gotham Fonts Family");
-}
+  src:$font-src ;
+}*/
 body {
   /*font-family: "Gotham";*/
 }
@@ -18,25 +29,36 @@ Headings
 ***************/
 
 h1, h2, h3, h4 {
-  color: #303937;
+ /* @font-face {
+    font-family: "Gotham Black";
+    src:$font-src ;
+  }*/
+  color: $hCol;
 }
 
 h1 {
+  font-weight: 900;
   font-size: 72px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 40px;
+}
+
+h3 {
+  Font-size: 22px;
+  Letter-spacing: 2px;
 }
 
 p{
   font-size: 16px !important;
-  line-height: 1.4;
+  line-height: 22px;
   color: #858f8e !important;
 }
 
 .sectionHeader {
-  color: #303937;
+  color: $hCol;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -47,10 +69,12 @@ Buttons
 
 .submitBtn {
   background-color: #cbec00;
-  color: #768504;
+  color: $hCol;
+  font-weight: 600;
   box-shadow: 3px 3px 3px #9bb302;
   cursor: pointer;
   width: 70%;
+  Font-size: 18px;
 }
 
 
@@ -71,9 +95,9 @@ Nav Section
 ***************/
 
 #topNav {
-  background-color:#303937;
+  background-color:$hCol;
   padding: 10px 0;
-  font-family: "Gotham Bold";
+  font-family: $font-src;
   font-size: 14px;
 }
 
@@ -194,12 +218,12 @@ Free Quote Section
 }
 
 #searchQuote {
-  padding-top: 15px;
+  padding-top: 35px;
 }
 
 .flexBox {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .searchBox {
@@ -209,6 +233,7 @@ Free Quote Section
   color: #cadad5;
   width: 95%;
   padding: 6px;
+  Font-size: 18px;
 }
 
 .searchBox, .submitBtn{
@@ -291,9 +316,7 @@ div.mouse {
   margin: 0 auto;
   display: block;
   width: 50px;
-  height: 80px;
-  border: solid 2px #fff;
-  border-radius: 25px;
+  height: 10px;
   -webkit-animation: scroll-mouse 20.5s;
   animation: scroll-mouse 20.5s;
   -webkit-animation-iteration-count: infinite;
@@ -329,6 +352,13 @@ Media Queries
     width: 70%;
     margin: 10px 0;
   }
+  h1 {
+    font-size: 40px;
+    line-height: 1.25em;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
 
@@ -337,3 +367,55 @@ Media Queries
     width: 95%;
   }
 }
+
+@media screen and (max-width: 560px) {
+  h1 {
+    font-size: 32px;
+    line-height: 1.25em;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  #searchQuote {
+    padding-top: 10px;
+  }
+  #headBackground {
+    height: 65vh;
+  }
+}
+
+/*Testimonails Section*/
+
+#testimonials {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+#userFeedback {
+  margin-top: 30px;
+}
+
+.infoImgDiv {
+  border: 1px solid red;
+}
+
+.infoDesc {
+  border: 1px solid red;
+  margin-left: 8%;
+}
+
+.testQuote{
+  color:rgba(81, 196, 188, .2);
+  margin-top: 1%;
+}
+
+blockquote {
+  border: none;
+}
+.blockQuoteH3{
+  margin-top: -90px;
+  text-align: justify;
+}
+

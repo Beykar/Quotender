@@ -10,9 +10,6 @@
     "quotender",
     "node.js"
   ],
-  "scripts": {
-   "sass-watch":
-  },
   "homepage": "https://github.com/Beykar/Quotender",
   "ignore": [
     "**/.*",
@@ -24,6 +21,8 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "bootstrap": "3.3.7",
-    "gotham-fonts": "*"
+    "gotham-fonts": "*",
+    "node-sass": "^4.8.2",
+    "components-font-awesome": "^5.0.6"
   }
 }
