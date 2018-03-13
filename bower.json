@@ -10,6 +10,9 @@
     "quotender",
     "node.js"
   ],
+  "scripts": {
+   "sass-watch":
+  },
   "homepage": "https://github.com/Beykar/Quotender",
   "ignore": [
     "**/.*",

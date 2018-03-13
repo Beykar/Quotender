@@ -14,7 +14,7 @@
           href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
 
     <!--/fonts-->
-    <link rel="stylesheet" href="bower_components/gotham-fonts/fonts/">
+    <link rel="stylesheet" href="build/fonts/Gotham%20Fonts%20Family/Gotham-BookItalic.otf">
 
     <!--css main-->
     <link rel="stylesheet" href="build/css/style.css" media="screen">
@@ -49,7 +49,7 @@
                             <li><a class="nav-links">Home</a></li>
                             <li><a class="nav-links">About Quotender</a></li>
                             <li><a class="nav-links">Contact</a></li>
-                            <li><a class="tel-Link">020 7624 3556</a></li>
+                            <li><a class="tel-Link"><img src="build/imgs/head_imgs/Phone-Icon%202.png" class="hidden-xs" id="phone-icon">020 7624 3556</a></li>
                         </ul><!--/nav navbar-nav navbar-right-->
                     </div><!--/navbar-collapse collapse-->
                 </div><!--/container-->
@@ -58,19 +58,37 @@
             <div id="headBackground">
                 <div id="freeQuote">
                     <div class="container">
-                        <div id="innerFreeQuote" class="text-center">
-                            <h1 class="text-uppercase">get a free quote</h1>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="innerFreeQuote" class="text-center">
+                                    <h1 class="text-uppercase">get a free quote</h1>
 
-                            <form type="submit" id="searchQuote" action="#">
-                                <div class="flexBox">
-                                    <label for="search"></label>
-                                    <input type="text" class="searchBox" name="search" id="search">
-                                    <input type="submit" class="btn submitBtn">
-                                </div><!--/flexBox-->
-                            </form><!--/searchQuote-->
-                            <div id="scrollMouse"><img src="build/imgs/head_imgs/MOUSE.png" alt="scroll mouse"></div><!--/scrollMouse-->
+                                    <form type="submit" id="searchQuote" action="#">
+                                        <!--<div class="flexBox">-->
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-md-push-2 col-sm-12">
+                                                <label for="search"></label>
+                                                <input type="text" class="searchBox" name="search" id="search">
+                                            </div><!--/col-lg-6-->
 
-                        </div><!--/innerFreeQuote-->
+                                            <div class="col-lg-4 col-md-4 col-md-push-2 col-sm-12">
+                                                <input type="submit" class="btn submitBtn">
+                                            </div><!--/<div class="col-lg-6 col-sm-12">-->
+                                        </div><!--/row-->
+
+                                    </form><!--/searchQuote-->
+                                    <div class='mouse-container hidden-sm hidden-xs'>
+                                        <div class='mouse'>
+                                            <span class='scroll-down'>
+                                             <img src="build/imgs/head_imgs/MOUSE.png" alt="scroll mouse">
+                                            </span><!--/scroll-down-->
+                                        </div><!--/mouse-->
+                                    </div><!--/mouse-container-->
+
+                                </div><!--/innerFreeQuote-->
+                            </div><!--/col-lg-12-->
+                        </div><!--/row-->
+
                     </div><!--/container-->
                 </div><!--/freeQuote-->
 
@@ -92,7 +110,7 @@
                                    <div class="workBox text-center">
                                        <div class="workBox-content">
                                             <div class="boxIconImg">
-                                           <img src="build/imgs/work_section/tender.png" alt="tender icon">
+                                           <img class="work-icon" src="build/imgs/work_section/tender.png" alt="tender icon">
                                        </div><!--/boxIconImg-->
                                        <div class="boxHeader">
                                            <h3 class="text-uppercase">1. create a table </h3>
@@ -108,7 +126,7 @@
                                     <div class="workBox text-center">
                                         <div class="workBox-content">
                                             <div class="boxIconImg">
-                                                <img src="build/imgs/work_section/icon%20find%20suppliers.png" alt="tender icon">
+                                                <img class="work-icon" src="build/imgs/work_section/icon%20find%20suppliers.png" alt="tender icon">
                                             </div><!--/boxIconImg-->
                                             <div class="boxHeader">
                                                 <h3 class="text-uppercase">2. Receive Quote </h3>
@@ -125,7 +143,7 @@
                                     <div class="workBox text-center">
                                         <div class="workBox-content">
                                             <div class="boxIconImg">
-                                                <img src="build/imgs/work_section/quote.png" alt="tender icon">
+                                                <img class="work-icon" src="build/imgs/work_section/quote.png" alt="tender icon">
                                             </div><!--/boxIconImg-->
                                             <div class="boxHeader">
                                                 <h3 class="text-uppercase">3. Find Suppliers </h3>
