@@ -19,6 +19,7 @@
 
   init = () => {
       navToggle();
+
   }; //init
 
   window.addEventListener("load", init);

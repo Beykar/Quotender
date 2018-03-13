@@ -334,3 +334,13 @@ blockquote {
 .blockQuoteH3 {
   margin-top: -90px;
   text-align: justify; }
+
+.emptyStar {
+  background-image: url("../imgs/test_section/star-empty.svg");
+  width: 10px;
+  height: 10px; }
+
+/*
+.rating-container .star {
+  color:#51c4bc;
+}*/
