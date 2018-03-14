@@ -2,6 +2,7 @@
 
  let
 
+
      /**
       * @name:   navToggle()
       * @desc:   Hamburger changes to x, once clicked
@@ -12,13 +13,16 @@
             $(this).toggleClass('open');
 
         });
-    }; //navToggle
+    }, //navToggle
+
 
 
 
 
   init = () => {
       navToggle();
+
+
 
   }; //init
 
