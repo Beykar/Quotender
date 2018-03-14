@@ -28,7 +28,8 @@ h1 {
   font-size: 72px; }
 
 h2 {
-  font-size: 40px; }
+  font-size: 40px;
+  font-weight: 900; }
 
 h3 {
   Font-size: 22px;
@@ -93,9 +94,6 @@ a.tel-Link:hover {
   margin-right: 5%;
   margin-top: -10%; }
 
-/*.navbar-default .navbar-nav>li>a:hover {
-    color: #cbec00;
-}*/
 /* Icon 1 */
 #burger:hover {
   background-color: #303937; }
@@ -321,8 +319,7 @@ Media Queries
   border: 1px solid red; }
 
 .infoDesc {
-  border: 1px solid red;
-  margin-left: 8%; }
+  border: 1px solid red; }
 
 .testQuote {
   color: rgba(81, 196, 188, 0.2);
@@ -334,8 +331,11 @@ Media Queries
 blockquote {
   border: none; }
 
+.blockQuote-Footer {
+  margin-top: -5%; }
+
 .blockQuoteH3 {
-  margin-top: -12%;
+  margin-top: -13%;
   text-align: left; }
 
 .rateDivContainer {
@@ -354,7 +354,48 @@ blockquote {
   height: 25px;
   background-repeat: no-repeat; }
 
-/*
-.rating-container .star {
-  color:#51c4bc;
-}*/
+/****** OUR CLIENTS SECTION *************/
+#our-clients {
+  margin-top: -3%;
+  padding: 1% 0;
+  background-color: lightgray; }
+
+.clientDiv {
+  padding-top: 10px; }
+
+.trustQuote {
+  border: 1px solid red;
+  color: #cadad5; }
+
+.trustQuote p {
+  margin: 6px 0 7px !important; }
+
+#company-clients {
+  border: 1px solid red;
+  padding-left: 0;
+  margin: 6px 0 7px; }
+
+#company-clients {
+  display: flex;
+  list-style: none;
+  justify-content: space-between; }
+
+#company-clients li {
+  margin: 0 10px; }
+
+@media screen and (max-width: 992px) {
+  #company-clients {
+    display: flex;
+    list-style: none;
+    justify-content: center; } }
+
+/*CATEGORIES Section*/
+#topCats {
+  margin-top: 70px; }
+
+.catDiv {
+  border: 1px solid lightgray;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin: 3px 0;
+  padding: 10px 10px; }
