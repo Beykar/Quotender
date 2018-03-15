@@ -23,6 +23,7 @@
     "bootstrap": "3.3.7",
     "gotham-fonts": "*",
     "node-sass": "^4.8.2",
-    "components-font-awesome": "^5.0.6"
+    "components-font-awesome": "^5.0.6",
+    "waypoints": "jquery-waypoints#^4.0.1"
   }
 }
