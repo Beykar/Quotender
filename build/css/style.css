@@ -429,7 +429,7 @@ blockquote {
 @media screen and (max-width: 767px) {
   #cat {
     border-top: 1px solid #cadad5;
-    padding: 0; }
+    padding: 10px 0 0 0; }
   .cat-container {
     padding: 0; }
   .catDiv {
