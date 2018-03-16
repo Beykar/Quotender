@@ -539,30 +539,30 @@ blockquote {
 
 /* Categories Section Media Queries */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
 
+    #cat{
+      border-top: 1px solid #cadad5;
+      padding:10px 0 0 0;
+    }
 
-  #cat{
-    border-top: 1px solid #cadad5;
-    padding:10px 0 0 0;
-  }
+    .cat-container {
+      padding: 0;
+    }
 
-  .cat-container {
-    padding: 0;
-  }
+    .catDiv{
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #cadad5;
+      border-left: 1px solid #cadad5;
+    }
 
-  .catDiv{
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #cadad5;
-  }
+    .catImg img{
+      width:55px;
+    }
 
-  .catImg img{
-    width:55px;
-  }
-
-  .catTitle {
-    border-left: 1px solid #cadad5;
-  }
+    .catTitle {
+      border-left: 1px solid #cadad5;
+    }
 }
 
 

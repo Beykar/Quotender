@@ -426,7 +426,7 @@ blockquote {
   margin-left: 0 !important; }
 
 /* Categories Section Media Queries */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #cat {
     border-top: 1px solid #cadad5;
     padding: 10px 0 0 0; }
@@ -434,7 +434,8 @@ blockquote {
     padding: 0; }
   .catDiv {
     padding: 0 0 10px 0;
-    border-bottom: 1px solid #cadad5; }
+    border-bottom: 1px solid #cadad5;
+    border-left: 1px solid #cadad5; }
   .catImg img {
     width: 55px; }
   .catTitle {
