@@ -16,7 +16,14 @@
         });
     }, //navToggle
 
-    countFunction = () => {
+     /**
+      * @name countFunction
+      * @desc   function that animates number in a counter style only once
+      * when the browser gets to the section the first time or if the page is refreshed.
+      * @returns {boolean}
+      */
+
+     countFunction = () => {
 
          $('#innerReasons').waypoint(function () {
 
@@ -29,7 +36,7 @@
                         duration: 5000,
                         easing: 'swing',
                         step: function (now) {
-                            $(this).text(Math.ceil(now));
+                            $(this).text(Math.ceil(now)).toLocaleString('en-US');
                         }
                     });
                 });
