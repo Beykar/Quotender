@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sasswatch": "node‐sass ‐‐watch build/scss/ ‐‐output build/css/"
+    "sasswatch": "node-sass --watch build/scss/ --output build/css/"
   },
   "repository": {
     "type": "git",
