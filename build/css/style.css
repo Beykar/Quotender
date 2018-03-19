@@ -441,6 +441,30 @@ blockquote {
   .catTitle {
     border-left: 1px solid #cadad5; } }
 
+/*SLICK ARROWS*/
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: white; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #858f8e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 /*reasons Section*/
 #reasons {
   padding: 150px 0;

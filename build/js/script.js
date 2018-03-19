@@ -59,7 +59,7 @@
 
              // normal options...
              infinite: false,
-             autoplaySpeed:500,
+             autoplaySpeed:3000,
              autoplay:true,
 
              // the magic
