@@ -94,12 +94,31 @@
 
      },//playCatSlider
 
+     showMoreCats = () =>{
+
+         let
+             start = 3;
+
+         $(".catDiv").hide();
+         $('.catDiv:lt(4)').show();
+
+         $('#viewMoreBtn').click(function () {
+             if (typeof(start) != undefined){
+                 $('.catDiv:lt(' + (start +5) + '):gt(' + start + ')').fadeIn("slow");
+                 start +=4;
+             }
+         });
+
+
+     },//showMoreCats
+
 
   init = () => {
 
       navToggle();
       countFunction();
       playCatSlider();
+      showMoreCats();
 
   }; //init
 
