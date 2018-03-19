@@ -9,7 +9,7 @@
       * @desc:   Hamburger changes to x, once clicked
       */
 
-     navToggles = () => {
+     navToggle = () => {
         $("#nav-icon1").click(function () {
             $(this).toggleClass('open');
 
@@ -54,14 +54,53 @@
     }, //countFunction
 
 
+     playCatSlider = () =>{
+
+
+         $(".catSlider").slick({
+
+             // normal options...
+             infinite: false,
+             slidesToShow: 13,
+             slidesToScroll:13,
+
+             // the magic
+             responsive: [{
+
+                 breakpoint: 1024,
+                 settings: {
+                     slidesToShow:13,
+                     slidesToScroll:13,
+                     infinite: true
+                 }
+
+             }, {
+
+                 breakpoint: 600,
+                 settings: {
+                     slidesToShow:6,
+                     slidesToScroll:6,
+                     dots: false
+                 }
+
+             }, {
+
+                 breakpoint: 300,
+                 settings: "unslick" // destroys slick
+
+             }]
+         });
+
+
+
+     },//playCatSlider
+
+
   init = () => {
-      navToggles();
 
+      navToggle();
       countFunction();
-
-
-
-
+      playCatSlider();
 
   }; //init
 
