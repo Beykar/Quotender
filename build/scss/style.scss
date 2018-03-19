@@ -587,3 +587,23 @@ blockquote {
 .reasonDiv{
   margin: 30px 0;
 }
+
+
+/******************
+  Footer section
+*******************/
+.footerDiv {
+  background-color: $hCol;
+  color: $pCol;
+  padding: 30px 0;
+}
+
+.footerContent {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 481px){
+  .footerContent p {
+    font-size: 10px !important;
+  }
+}
