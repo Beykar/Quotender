@@ -6,6 +6,12 @@ General
 
 $font-src:url("../fonts/Gotham Fonts Family");
 $hCol:#303937;
+$pCol:#858f8e;
+$bgCol:#cbec00;
+$boxShadowCol:#9bb302;
+$viewMoreCol:#4dc1ba;
+$searchCol:#cadad5;
+
 
 
 /*********** END OF SCSS VARIABLES *******/
@@ -54,7 +60,7 @@ h3 {
 p{
   font-size: 16px !important;
   line-height: 22px;
-  color: #858f8e !important;
+  color: $pCol !important;
 }
 
 .sectionHeader {
@@ -69,10 +75,10 @@ Buttons
 ***************/
 
 .submitBtn {
-  background-color: #cbec00;
+  background-color: $bgCol;
   color: $hCol;
   font-weight: 600;
-  box-shadow: 0 3px 0 #9bb302;
+  box-shadow: 0 3px 0 $boxShadowCol;
   cursor: pointer;
   width: 70%;
   Font-size: 18px;
@@ -81,9 +87,9 @@ Buttons
 #viewMoreBtn {
   margin-top: 1%;
   background-color: #ffffff;
-  color: #4dc1ba;
-  border: 1px solid #4dc1ba;
-  box-shadow: 0 3px 0 #4dc1ba;
+  color: $viewMoreCol;
+  border: 1px solid $viewMoreCol;
+  box-shadow: 0 3px 0 $viewMoreCol;
   font-weight: 600;
   cursor: pointer;
   Font-size: 14px;
@@ -125,7 +131,7 @@ a.nav-links:hover {
 }
 
 a.tel-Link {
-  color: #cbec00 !important;
+  color: $bgCol!important;
 }
 a.tel-Link:hover {
   opacity: 0.8;
@@ -164,7 +170,7 @@ a.tel-Link:hover {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #cbec00;
+  background: $bgCol;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -236,9 +242,9 @@ Free Quote Section
 
 .searchBox {
   background-color: #ffffff;
-  border: 1px solid #cadad5;
-  box-shadow: 3px 3px 3px #cadad5;
-  color: #cadad5;
+  border: 1px solid $searchCol;
+  box-shadow: 3px 3px 3px $searchCol;
+  color: $searchCol;
   width: 95%;
   padding: 6px;
   Font-size: 18px;
@@ -282,8 +288,8 @@ Main
 }
 
 .workBox:hover {
-  box-shadow: 0 5px 5px -2px #cbec00;
-  border: 1px solid #cbec00;
+  box-shadow: 0 5px 5px -2px $bgCol;
+  border: 1px solid $bgCol;
   margin-top: 2%;
 }
 
@@ -469,7 +475,7 @@ blockquote {
 
 .trustQuote {
   border: 1px solid red;
-  color: #cadad5;
+  color: $searchCol;
 }
 
 .trustQuote p {
@@ -542,7 +548,7 @@ blockquote {
 @media screen and (max-width: 768px){
 
     #cat{
-      border-top: 1px solid #cadad5;
+      border-top: 1px solid $searchCol;
       padding:10px 0 0 0;
     }
 
@@ -552,8 +558,8 @@ blockquote {
 
     .catDiv{
       padding: 0 0 10px 0;
-      border-bottom: 1px solid #cadad5;
-      border-left: 1px solid #cadad5;
+      border-bottom: 1px solid $searchCol;
+      border-left: 1px solid $searchCol;
     }
 
     .catImg img{
@@ -561,7 +567,7 @@ blockquote {
     }
 
     .catTitle {
-      border-left: 1px solid #cadad5;
+      border-left: 1px solid $searchCol;
     }
 }
 
@@ -571,7 +577,7 @@ blockquote {
 
 #reasons {
   padding: 150px 0;
-  background-color: #cbec00;
+  background-color: $bgCol;
 }
 
 #innerReasons{
