@@ -9,7 +9,7 @@
       * @desc:   Hamburger changes to x, once clicked
       */
 
-     navToggle = () => {
+     navToggles = () => {
         $("#nav-icon1").click(function () {
             $(this).toggleClass('open');
 
@@ -55,7 +55,7 @@
 
 
   init = () => {
-      navToggle();
+      navToggles();
 
       countFunction();
 
