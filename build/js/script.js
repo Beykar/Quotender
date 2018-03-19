@@ -56,6 +56,7 @@
 
      playCatSlider = () =>{
 
+
          $(".catSlider").slick({
 
              // normal options...

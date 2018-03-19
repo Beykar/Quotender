@@ -488,3 +488,18 @@ blockquote {
 
 .reasonDiv {
   margin: 30px 0; }
+
+/******************
+  Footer section
+*******************/
+.footerDiv {
+  background-color: #303937;
+  color: #858f8e;
+  padding: 30px 0; }
+
+.footerContent {
+  padding-top: 10px; }
+
+@media screen and (max-width: 481px) {
+  .footerContent p {
+    font-size: 10px !important; } }
