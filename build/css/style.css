@@ -441,6 +441,43 @@ blockquote {
   .catTitle {
     border-left: 1px solid #cadad5; } }
 
+/*SLICK ARROWS FOR CATEGORIES SECTION*/
+#cat li.slick-slide.slick-cloned {
+  width: 75px !important; }
+
+#cat .slick-prev, #cat .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 90%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: -10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent; }
+
+#cat .slick-prev:before, #cat .slick-next:before {
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 1;
+  opacity: .75;
+  color: #4dc1ba;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@media screen and (max-width: 922px) {
+  #cat .slick-prev, #cat .slick-next {
+    top: 0;
+    margin: 10px;
+    width: 20px;
+    height: 20px; }
+  #cat .slick-prev:before, #cat .slick-next:before {
+    font-size: 20px; } }
+
+/** end of slick arrows for Categories      ***/
 /*reasons Section*/
 #reasons {
   padding: 150px 0;
