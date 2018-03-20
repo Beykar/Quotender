@@ -442,7 +442,7 @@ blockquote {
     border-left: 1px solid #cadad5; } }
 
 /*SLICK ARROWS*/
-#userFeedback .slick-prev, #userFeedback .slick-next {
+.slick-prev, .slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -456,7 +456,7 @@ blockquote {
   border: none;
   background: white; }
 
-#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
+.slick-prev:before, .slick-next:before {
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;
