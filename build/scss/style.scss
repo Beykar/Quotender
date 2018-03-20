@@ -573,7 +573,7 @@ blockquote {
 
 /*SLICK ARROWS*/
 
-.slick-prev, .slick-next {
+#userFeedback .slick-prev, #userFeedback .slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -588,7 +588,7 @@ blockquote {
   background: white;
 }
 
-.slick-prev:before, .slick-next:before {
+#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;
