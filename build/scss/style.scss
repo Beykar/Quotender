@@ -571,6 +571,31 @@ blockquote {
     }
 }
 
+
+/*SLICK ARROWS*/
+
+#userFeedback .slick-prev, #userFeedback .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: white;
+}
+
+#userFeedback .slick-prev:before,#userFeedback .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: $pCol;
+}
 /*SLICK ARROWS FOR CATEGORIES SECTION*/
 
 #cat li.slick-slide.slick-cloned{
@@ -598,9 +623,12 @@ blockquote {
   line-height: 1;
   opacity: .75;
   color: $viewMoreCol;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 
 @media screen and (max-width: 922px){
@@ -629,7 +657,6 @@ blockquote {
 } /* bootstrap hack end */
 
 /** end of slick arrows for Categories      ***/
-
 
 
 /*reasons Section*/

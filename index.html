@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="build/imgs/head_imgs/logo.png" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quotender</title>
+    <title>Quotender2</title>
 
     <!--/bootstrap css-->
     <link rel="stylesheet"
@@ -22,6 +22,12 @@
     <!--/fonts-->
     <link rel="stylesheet" href="build/fonts/Gotham%20Fonts%20Family/Gotham-BookItalic.otf">
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/fontawesome-all.css">
+
+
+    <!-- / plugin slick slider -->
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
 
     <!--css main-->
     <link rel="stylesheet" href="build/css/style.css" media="screen">
@@ -175,7 +181,93 @@
                 <h2>Testimonials</h2>
             </div><!--/sectionHeader-->
 
-            <div id="userFeedback">
+            <div id="userFeedback" class="slider">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                        <div class="infoDiv"></div><!--/info-->
+                        <div class="infoImgDiv hidden-sm hidden-xs">
+                            <img width="180px" src="build/imgs/test_section/circles.svg" alt="feedback image">
+                        </div><!--/infoImgDiv-->
+                    </div><!--/col-lg-4-->
+
+
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="infoDesc">
+
+                            <div class="rateDivContainer">
+                                <p class="fullStar"></p>
+                                <p class="fullStar"></p>
+                                <p class="emptyStar"></p>
+                                <p class="emptyStar"></p>
+                                <p class="emptyStar"></p>
+
+                                <!--/Dynamic FOR loop for star rating GOES HERE-->
+                            </div><!--/rateDiv-->
+
+                            <div class="blockQuote">
+
+                                <blockquote>
+                                    <i class="testQuote fa fa-6x fa-quote-left" aria-hidden="true"></i>
+                                    <h3 class="blockQuoteH3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores earum et harum maiores mollitia provident reiciendis sed tempora unde. Ad commodi doloremque esse nam optio quo, tempora temporibus veniam?</h3>
+                                </blockquote>
+                            </div><!--/blockQuote-->
+
+                            <div class="blockQuote-Footer">
+                                <blockquote>
+                                    <h5 class="text-left">Lorem ipsum dolor.</h5>
+                                </blockquote>
+                            </div><!--/blockQuote-->
+
+
+
+
+                        </div><!--/infoDesc-->
+                    </div><!--/col-lg-9-->
+
+                </div><!--/row-->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                        <div class="infoDiv"></div><!--/info-->
+                        <div class="infoImgDiv hidden-sm hidden-xs">
+                            <img width="180px" src="build/imgs/test_section/circles.svg" alt="feedback image">
+                        </div><!--/infoImgDiv-->
+                    </div><!--/col-lg-4-->
+
+
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="infoDesc">
+
+                            <div class="rateDivContainer">
+                                <p class="fullStar"></p>
+                                <p class="fullStar"></p>
+                                <p class="emptyStar"></p>
+                                <p class="emptyStar"></p>
+                                <p class="emptyStar"></p>
+
+                                <!--/Dynamic FOR loop for star rating GOES HERE-->
+                            </div><!--/rateDiv-->
+
+                            <div class="blockQuote">
+
+                                <blockquote>
+                                    <i class="testQuote fa fa-6x fa-quote-left" aria-hidden="true"></i>
+                                    <h3 class="blockQuoteH3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores earum et harum maiores mollitia provident reiciendis sed tempora unde. Ad commodi doloremque esse nam optio quo, tempora temporibus veniam?</h3>
+                                </blockquote>
+                            </div><!--/blockQuote-->
+
+                            <div class="blockQuote-Footer">
+                                <blockquote>
+                                    <h5 class="text-left">Lorem ipsum dolor.</h5>
+                                </blockquote>
+                            </div><!--/blockQuote-->
+
+
+
+
+                        </div><!--/infoDesc-->
+                    </div><!--/col-lg-9-->
+
+                </div><!--/row-->
                 <div class="row">
                     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                         <div class="infoDiv"></div><!--/info-->
@@ -1944,6 +2036,9 @@
 
     <!--/ jquery script-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!--/ slick slider -->
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
 
     <!--/ bootstrap js script-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
