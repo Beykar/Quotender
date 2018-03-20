@@ -113,6 +113,25 @@
 
      },//showMoreCats
 
+     tabsShow = () => {
+         $(".nav-tabs").click( () => {
+
+             // switch all tabs off
+             $(".active").removeClass("active");
+
+             // switch this tab on
+             $(this).addClass("active");
+
+             // look and find'title' attribute value is and find the element with that id.  Then slide that down.
+             let
+                 show_show = $(this).attr("title"),
+                 num_tabs = "true";
+
+             $("#"+show_show).fadeIn();
+
+         });
+     },
+
 
   init = () => {
 
@@ -120,6 +139,7 @@
       countFunction();
       playCatSlider();
       showMoreCats();
+      tabsShow();
 
   }; //init
 
