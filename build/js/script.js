@@ -117,7 +117,7 @@
 
       navToggle();
       countFunction();
-      /*playCatSlider();*/
+      playCatSlider();
       showMoreCats();
 
   }; //init
