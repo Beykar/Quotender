@@ -442,7 +442,7 @@ blockquote {
     border-left: 1px solid #cadad5; } }
 
 /*SLICK ARROWS*/
-.slick-prev, .slick-next {
+#userFeedback .slick-prev, #userFeedback .slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -456,15 +456,64 @@ blockquote {
   border: none;
   background: white; }
 
-.slick-prev:before, .slick-next:before {
+#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;
   opacity: .75;
-  color: #858f8e;
+  color: #858f8e; }
+
+/*SLICK ARROWS FOR CATEGORIES SECTION*/
+#cat li.slick-slide.slick-cloned {
+  width: 75px !important; }
+
+#cat .slick-prev, #cat .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 90%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: -10px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent; }
+
+#cat .slick-prev:before, #cat .slick-next:before {
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 1;
+  opacity: .75;
+  color: #4dc1ba;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+@media screen and (max-width: 922px) {
+  #cat .slick-prev, #cat .slick-next {
+    top: 0;
+    margin: 10px;
+    width: 20px;
+    height: 20px; }
+  #cat .slick-prev:before, #cat .slick-next:before {
+    font-size: 20px; } }
+
+/* bootstrap hack: fix content width inside hidden tabs */
+#cat.panel.tab-content > .tab-pane {
+  display: block !important;
+  /* undo display:none          */
+  height: 0 !important;
+  /* height:0 is also invisible */
+  overflow-y: hidden !important;
+  /* no-overflow                */ }
+
+#cat.panel.tab-content > .active {
+  height: auto !important;
+  /* let the content decide it  */ }
+
+/* bootstrap hack end */
+/** end of slick arrows for Categories      ***/
 /*reasons Section*/
 #reasons {
   padding: 150px 0;
@@ -475,3 +524,18 @@ blockquote {
 
 .reasonDiv {
   margin: 30px 0; }
+
+/******************
+  Footer section
+*******************/
+.footerDiv {
+  background-color: #303937;
+  color: #858f8e;
+  padding: 30px 0; }
+
+.footerContent {
+  padding-top: 10px; }
+
+@media screen and (max-width: 481px) {
+  .footerContent p {
+    font-size: 10px !important; } }

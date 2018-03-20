@@ -54,6 +54,7 @@
     }, //countFunction
 
 
+
      playTestimonialSlider =()=>{
          $(".slider").slick({
 
@@ -89,15 +90,94 @@
 
      }, //playTestimonialSlider
 
+
+     playCatSlider = () =>{
+
+
+         $(".catSlider").slick({
+
+             // normal options...
+             infinite: false,
+             slidesToShow: 13,
+             slidesToScroll:13,
+
+             // the magic
+             responsive: [{
+
+                 breakpoint: 1024,
+                 settings: {
+                     slidesToShow:13,
+                     slidesToScroll:13,
+                     infinite: true
+                 }
+
+             }, {
+
+                 breakpoint: 600,
+                 settings: {
+                     slidesToShow:6,
+                     slidesToScroll:6,
+                     dots: false
+                 }
+
+
+             }, {
+
+                 breakpoint: 300,
+                 settings: "unslick" // destroys slick
+
+             }]
+         });
+
+
+
+     },//playCatSlider
+
+     showMoreCats = () =>{
+
+         let
+             start = 7;
+
+         $(".catDiv").hide();
+         $('.catDiv:lt(8)').show();
+         $('#viewMoreBtn').click(function () {
+             if (typeof(start) != undefined){
+                 $('.catDiv:lt(' + (start +9) + '):gt(' + start + ')').fadeIn("slow");
+                 start +=8;
+             }
+         });
+
+
+     },//showMoreCats
+
+     tabsShow = () => {
+         $(".nav-tabs").click( () => {
+
+             // switch all tabs off
+             $(".active").removeClass("active");
+
+             // switch this tab on
+             $(this).addClass("active");
+
+             // look and find'title' attribute value is and find the element with that id.  Then slide that down.
+             let
+                 show_show = $(this).attr("title"),
+                 num_tabs = "true";
+
+             $("#"+show_show).fadeIn();
+
+         });
+     },
+
+
   init = () => {
+
       navToggle();
-
       countFunction();
-
       playTestimonialSlider();
-
-
-
+      playCatSlider();
+      showMoreCats();
+      tabsShow();
 
   }; //init
 
