@@ -98,15 +98,14 @@
      showMoreCats = () =>{
 
          let
-             start = 3;
+             start = 7;
 
          $(".catDiv").hide();
-         $('.catDiv:lt(4)').show();
-
+         $('.catDiv:lt(8)').show();
          $('#viewMoreBtn').click(function () {
              if (typeof(start) != undefined){
-                 $('.catDiv:lt(' + (start +5) + '):gt(' + start + ')').fadeIn("slow");
-                 start +=4;
+                 $('.catDiv:lt(' + (start +9) + '):gt(' + start + ')').fadeIn("slow");
+                 start +=8;
              }
          });
 
@@ -118,7 +117,7 @@
 
       navToggle();
       countFunction();
-      playCatSlider();
+      /*playCatSlider();*/
       showMoreCats();
 
   }; //init
