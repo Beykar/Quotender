@@ -2,6 +2,9 @@
 
  let
      animated = false,
+     activeTab = $(".tab-content").find(".active"),
+     $panelID = activeTab.attr('id'),
+
 
 
      /**
@@ -27,7 +30,7 @@
 
          $('#innerReasons').waypoint(function () {
 
-             if ( animated == false) {
+             if (animated == false) {
 
                 $('.count').each(function () {
                     $(this).prop('Counter', 0).animate({
@@ -94,31 +97,65 @@
 
      },//playCatSlider
 
+
+
+
      showMoreCats = () =>{
 
-         let
-             start = 3;
+         $(".nav-tabs li a").click(()=>{
 
-         $(".catDiv").hide();
-         $('.catDiv:lt(4)').show();
 
-         $('#viewMoreBtn').click(function () {
-             if (typeof(start) != undefined){
-                 $('.catDiv:lt(' + (start +5) + '):gt(' + start + ')').fadeIn("slow");
-                 start +=4;
-             }
+             let    $start = 3;
+
+
+             $("#"+$panelID+" .catDiv").hide();
+             $("#"+$panelID+" .catDiv:lt(4)").show();
+
+
+             $('#viewMoreBtn').click(()=> {
+
+
+                 if (typeof($start) != undefined){
+
+                     $('#'+$panelID+'.catDiv:lt(' + ($start +5) + '):gt(' + $start + ')').fadeIn("slow");
+                     $start +=4;
+                 }
+
+             });
+
          });
 
 
      },//showMoreCats
 
+     tabsShow = () => {
+         $(".nav-tabs li").click( () => {
+
+             // switch all tabs off
+             $(this).removeClass("active");
+             // switch this tab on
+             $(this).addClass("active");
+
+
+             // look and find'title' attribute value is and find the element with that id.  Then slide that down.
+             let
+                 show_show = $(this).attr("title"),
+                 num_tabs = "true";
+
+             $("#"+show_show).fadeIn();
+
+         });
+     },
+
 
   init = () => {
-
+      console.log($panelID);
       navToggle();
       countFunction();
       playCatSlider();
       showMoreCats();
+      tabsShow();
+
 
   }; //init
 
