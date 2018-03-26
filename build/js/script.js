@@ -170,6 +170,16 @@
      },
 
 
+     popUpModalShow = () => {
+
+         $('#submitPopUpModal').on('shown.bs.modal', function () {
+             $('#submitBtn').focus()
+         });
+
+     },
+
+
+
   init = () => {
 
       navToggle();
@@ -178,6 +188,7 @@
       playCatSlider();
       showMoreCats();
       tabsShow();
+      popUpModalShow();
 
   }; //init
 
