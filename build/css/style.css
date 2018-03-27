@@ -539,3 +539,118 @@ blockquote {
 @media screen and (max-width: 481px) {
   .footerContent p {
     font-size: 10px !important; } }
+
+/***********************
+ Pop up Modal Form
+************************/
+#msform {
+  width: 90%;
+  margin: 5% auto;
+  text-align: center;
+  position: relative; }
+
+#msform fieldset {
+  background: transparent;
+  border: 0 none;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  /*stacking fieldsets above each other*/
+  position: relative; }
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none; }
+
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #2C3E50;
+  font-size: 16px; }
+
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #cbec00;
+  font-weight: bold;
+  color: #7d9006;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  box-shadow: 0 3px 0 #9bb302; }
+
+#msform .action-button:hover, #msform .action-button:focus {
+  background: rgba(203, 236, 0, 0.7);
+  box-shadow: 0 3px 0 #9bb302; }
+
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #2C3E50;
+  margin-bottom: 10px; }
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px; }
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 10px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step; }
+
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative; }
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: #B9B9B9;
+  border-radius: 50px;
+  margin: 0 auto 5px auto; }
+
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: gray;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+  /*put it behind the numbers*/ }
+
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none; }
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+  background: #cbec00;
+  color: white; }

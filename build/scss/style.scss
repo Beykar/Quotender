@@ -8,9 +8,15 @@ $font-src:url("../fonts/Gotham Fonts Family");
 $hCol:#303937;
 $pCol:#858f8e;
 $bgCol:#cbec00;
+$btnFontCol:#7d9006;
 $boxShadowCol:#9bb302;
 $viewMoreCol:#4dc1ba;
 $searchCol:#cadad5;
+$red:203;
+$green:236;
+$blue:0;
+$alpha:0.7;
+$bgColHover: rgba($red,$green,$blue,$alpha);
 
 
 
@@ -699,20 +705,19 @@ blockquote {
 ************************/
 
 #msform {
-  width: 400px;
-  margin: 50px auto;
+  width: 90%;
+  margin: 5% auto;
   text-align: center;
   position: relative;
 }
+
 #msform fieldset {
-  background: white;
+  background: transparent;
   border: 0 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
+  border-radius: 0;
   box-sizing: border-box;
-  width: 80%;
-  margin: 0 10%;
+  width: 100%;
+  margin: 0 auto;
 
   /*stacking fieldsets above each other*/
   position: relative;
@@ -729,29 +734,34 @@ blockquote {
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
-  font-family: montserrat;
+  font-family: Helvetica, sans-serif;
   color: #2C3E50;
-  font-size: 13px;
+  font-size: 16px;
 }
 /*buttons*/
 #msform .action-button {
   width: 100px;
-  background: #27AE60;
+  background: #cbec00;
   font-weight: bold;
-  color: white;
+  color: $btnFontCol;
   border: 0 none;
-  border-radius: 1px;
+  border-radius: 3px;
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px;
+  box-shadow: 0 3px 0 #9bb302;
+
 }
+
 #msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+  background: $bgColHover;
+  box-shadow: 0 3px 0 #9bb302;
+
 }
 /*headings*/
 .fs-title {
-  font-size: 15px;
-  text-transform: uppercase;
+  font-size: 18px;
+  text-transform: capitalize;
   color: #2C3E50;
   margin-bottom: 10px;
 }
@@ -763,7 +773,7 @@ blockquote {
 }
 /*progressbar*/
 #progressbar {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
@@ -785,8 +795,8 @@ blockquote {
   display: block;
   font-size: 10px;
   color: #333;
-  background: white;
-  border-radius: 3px;
+  background: #B9B9B9;
+  border-radius: 50px;
   margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
@@ -794,7 +804,7 @@ blockquote {
   content: '';
   width: 100%;
   height: 2px;
-  background: white;
+  background: gray;
   position: absolute;
   left: -50%;
   top: 9px;
@@ -807,6 +817,6 @@ blockquote {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-  background: #27AE60;
+  background: $bgCol;
   color: white;
 }
