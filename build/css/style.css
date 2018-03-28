@@ -543,6 +543,10 @@ blockquote {
 /***********************
  Pop up Modal Form
 ************************/
+#submitPopUpModal {
+  width: 100%;
+  height: 100%; }
+
 #msform {
   width: 90%;
   margin: 5% auto;
