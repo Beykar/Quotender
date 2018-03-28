@@ -549,12 +549,13 @@ blockquote {
 
 #msform {
   width: 90%;
-  margin: 5% auto;
+  margin: 2% auto;
   text-align: center;
-  position: relative; }
+  position: relative;
+  background: none; }
 
 #msform fieldset {
-  background: transparent;
+  background: none;
   border: 0 none;
   border-radius: 0;
   box-sizing: border-box;
@@ -593,20 +594,20 @@ blockquote {
   box-shadow: 0 3px 0 #9bb302; }
 
 #msform .action-button:hover, #msform .action-button:focus {
-  background: rgba(203, 236, 0, 0.7);
+  background: #cbec00;
   box-shadow: 0 3px 0 #9bb302; }
 
 /*headings*/
 .fs-title {
   font-size: 18px;
   text-transform: capitalize;
-  color: #2C3E50;
+  color: #ffffff;
   margin-bottom: 10px; }
 
 .fs-subtitle {
   font-weight: normal;
   font-size: 13px;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 20px; }
 
 /*progressbar*/
@@ -614,7 +615,8 @@ blockquote {
   margin-bottom: 10px;
   overflow: hidden;
   /*CSS counters to number the steps*/
-  counter-reset: step; }
+  counter-reset: step;
+  padding: 0; }
 
 #progressbar li {
   list-style-type: none;
@@ -658,3 +660,23 @@ blockquote {
 #progressbar li.active:before, #progressbar li.active:after {
   background: #cbec00;
   color: white; }
+
+.modal-dialog {
+  background: none; }
+
+.modal-content {
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  background: none; }
+
+.modal-header {
+  background: none;
+  border: none; }
+
+.close {
+  color: #ffffff;
+  opacity: 1; }
+
+.close :hover {
+  color: #ffffff; }
