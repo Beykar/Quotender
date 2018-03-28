@@ -133,21 +133,40 @@
 
      },//playCatSlider
 
-     showMoreCats = () =>{
-
-         let
-             start = 7;
-
-         $(".catDiv").hide();
-         $('.catDiv:lt(8)').show();
+     viewMore = (e) =>{
+         let start = 7;
          $('#viewMoreBtn').click(function () {
+
              if (typeof(start) != undefined){
-                 $('.catDiv:lt(' + (start +9) + '):gt(' + start + ')').fadeIn("slow");
+
+                 $(e + ' .catDiv:lt(' + (start +9) + '):gt(' + start + ')').fadeIn("slow");
                  start +=8;
              }
          });
+     }, //viewMore
 
 
+     showMoreCats = () =>{
+
+         $("#a-panel .catDiv").hide();
+         $("#a-panel .catDiv:lt(8)").show();
+         let $aPanel = document.getElementById("#a-panel");
+         viewMore($aPanel);
+
+         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+             let target = $(e.target).attr("href"); // activated tab
+
+             console.log(target);
+
+
+             activeTabDivs = document.querySelectorAll(target+" .catDiv");
+             console.log(activeTabDivs);
+
+             $(target + " .catDiv").hide();
+             $(target+ " .catDiv:lt(8)").show();
+             viewMore(target);
+
+         });
      },//showMoreCats
 
      tabsShow = () => {
