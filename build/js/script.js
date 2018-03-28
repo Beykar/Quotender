@@ -298,7 +298,9 @@
       tabsShow();
       popUpModalShow();
       displayMultyStepForm();
-
+      $('#submitBtn').click( function (e) {
+          e.preventDefault();
+      });
   }; //init
 
   window.addEventListener("load", init);
