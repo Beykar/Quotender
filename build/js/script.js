@@ -133,41 +133,93 @@
 
      },//playCatSlider
 
-     viewMore = (e) =>{
-         let start = 7;
-         $('#viewMoreBtn').click(function () {
+     /**
+      * @name   viewMore
+      * @desc   this function takes an id and a number and starts displaying divs in the id el (e) from starting position (g)
+      * @param e - string
+      * @param g - integer
+      */
 
-             if (typeof(start) != undefined){
+     viewMore = (e,g) =>{
 
-                 $(e + ' .catDiv:lt(' + (start +9) + '):gt(' + start + ')').fadeIn("slow");
-                 start +=8;
-             }
-         });
+        let
+            $start = g-1,
+            nodeListLength = $(e+ ' .catDiv').length;
+           /* console.log("this is start at the beginning:"+ $start);
+            console.log(nodeListLength);*/
+
+           if ($start < 0){
+
+               alert("No Categories to show!");
+           } else {
+               $('#viewMoreBtn').click(function () {
+                   if (($start < nodeListLength)) {
+
+                       $(e + ' .catDiv:lt(' + ($start + 9) + '):gt(' + $start + ')').fadeIn("slow");
+                       $start += 8;
+
+                       /*if (($start < nodeListLength)) {
+                           console.log("this is start when it's working:" + $start);
+                       } else {
+                           console.log("it's gone over:" + $start);
+                       }*/
+
+                   } else {
+
+                       $start -= 8;
+                       $(e + ' .catDiv:lt(' + (nodeListLength) + '):gt(' + $start + ')').fadeIn("slow");
+                       alert("No More categories to show!");
+                   }
+               });
+           }
      }, //viewMore
+
+
+     /**
+      * @name   showMoreCats
+      * @desc   This function finds the id of the target element (e.g. $target) then hides all the elements(e.g .catDiv) of a class in that     element, then displays the first 8 elements of that class (e.g. catDiv), then calls another foo (viewMore) to show more
+      */
 
 
      showMoreCats = () =>{
 
-         $("#a-panel .catDiv").hide();
-         $("#a-panel .catDiv:lt(8)").show();
-         let $aPanel = document.getElementById("#a-panel");
-         viewMore($aPanel);
+         //Showing the first 8  elements with class .catDiv in #a-panel as default
+            let
 
-         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-             let target = $(e.target).attr("href"); // activated tab
-
-             console.log(target);
+            $aPanel = document.getElementById('a-panel'),
+            $aPanelID = ('#'+$aPanel.getAttribute('id'));
 
 
-             activeTabDivs = document.querySelectorAll(target+" .catDiv");
-             console.log(activeTabDivs);
+            $("#a-panel .catDiv").hide();
 
-             $(target + " .catDiv").hide();
-             $(target+ " .catDiv:lt(8)").show();
-             viewMore(target);
+            let
+                onDisplay   = $("#a-panel .catDiv:lt(8)").show(),
+                startPoint = onDisplay.length;
+
+                viewMore($aPanelID, startPoint);
+
+
+            // grabbing the target id of the tab clicked then using it to display the first 8 elements with class .catDiv
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+                let
+                $target = $(e.target).attr("href"); // activated tab
+
+                $($target + " .catDiv").hide();
+
+             let
+                onDisplay = $($target+ " .catDiv:lt(8)").show();
+
+             startPoint = onDisplay.length;
+             viewMore($target, startPoint);
 
          });
      },//showMoreCats
+
+     /**
+      * @name   tabsShow
+      * @desc   on click, removes the .active class from any other tabs and applies is to current tab
+      */
 
      tabsShow = () => {
          $(".nav-tabs").click( () => {
@@ -289,7 +341,6 @@
 },
 
     init = () => {
-
       navToggle();
       countFunction();
       playTestimonialSlider();
