@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- mobile metatags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="build/imgs/head_imgs/logo.png" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quotender</title>
+
+    <!--/bootstrap css-->
+    <link rel="stylesheet"
+          href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+
+
+    <!--/slick-carousel-->
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+
+
+    <!--/fonts-->
+    <link rel="stylesheet" href="build/fonts/Gotham%20Fonts%20Family/Gotham-BookItalic.otf">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/fontawesome-all.css">
+
+
+    <!-- / plugin slick slider -->
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+
+    <!--css main-->
+    <link rel="stylesheet" href="build/css/style.css" media="screen">
+
+</head>
+<body>
+<div id="wrapper">
+    <header>
+
+        <nav class="nav navbar navbar-default navbar-fixed-top" id="topNav">
+            <div class="container">
+
+                <div class="navbar-header">
+
+
+                    <div class="navbar-brand" >
+                        <img class="img-responsive" id="logoQuote" src="build/imgs/head_imgs/logo.png" alt="Logo of Quotender">
+                    </div><!--/navbar-brand-->
+
+
+                </div><!--/navbar-header-->
+
+            </div><!--/container-->
+        </nav><!--/topNav-->
+
+        <div id="headBackground">
+            <div id="freeQuote">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Modal -->
+                            <div id="submitPopUpModal">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <a href="index.html"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></a>
+                                        </div><!--/modal-header-->
+                                    </div><!-- / modal-content -->
+
+                                    <form id="msform">
+                                        <!-- progressbar -->
+                                        <ul id="progressbar">
+                                            <li class="active">Account Setup</li>
+                                            <li>Social Profiles</li>
+                                            <li>Personal Details</li>
+                                        </ul>
+                                        <!-- fieldsets -->
+                                        <fieldset>
+                                            <h2 class="fs-title">Create your account</h2>
+                                            <h3 class="fs-subtitle">This is step 1</h3>
+                                            <input type="text" name="email" placeholder="Email" />
+                                            <input type="password" name="pass" placeholder="Password" />
+                                            <input type="password" name="cpass" placeholder="Confirm Password" />
+                                            <input type="button" name="next" class="next action-button" value="Next" />
+                                        </fieldset>
+                                        <fieldset>
+                                            <h2 class="fs-title">Social Profiles</h2>
+                                            <h3 class="fs-subtitle">Your presence on the social network</h3>
+                                            <input type="text" name="twitter" placeholder="Twitter" />
+                                            <input type="text" name="facebook" placeholder="Facebook" />
+                                            <input type="text" name="gplus" placeholder="Google Plus" />
+                                            <input type="button" name="previous" class="previous action-button" value="PREVIOUS" />
+                                            <input type="button" name="next" class="next action-button" value="Next" />
+                                        </fieldset>
+                                        <fieldset>
+                                            <h2 class="fs-title">Personal Details</h2>
+                                            <h3 class="fs-subtitle">We will never sell it</h3>
+                                            <input type="text" name="fname" placeholder="First Name" />
+                                            <input type="text" name="lname" placeholder="Last Name" />
+                                            <input type="text" name="phone" placeholder="Phone" />
+                                            <textarea name="address" placeholder="Address"></textarea>
+                                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                                            <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                                        </fieldset>
+                                    </form>
+                                    <!--</div>&lt;!&ndash; / modal-body &ndash;&gt;-->
+
+                                </div><!-- / modal-dialog-->
+
+                            </div><!--/modal-->
+                        </div><!--/col-lg-12-->
+                    </div><!--/row-->
+
+                </div><!--/container-->
+            </div><!--/freeQuote-->
+
+        </div><!--/headBackground-->
+
+    </header>
+
+
+    <footer>
+        <div class="footerDiv">
+            <div class="container">
+                <div class="footerContent text-center">
+                    <p class="lead">&commat;Web Design by Dotpeak, London. All rights reserved</p>
+                </div><!--/footerContent-->
+            </div><!--/container-->
+        </div><!--/footerDiv-->
+    </footer>
+
+    <!--/ jquery script-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!--/ slick slider -->
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+    <!--/ bootstrap js script-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--/ waypoints script-->
+    <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+
+    <!-- / jquery-easing script-->
+    <script src="node_modules/jquery-easing/dist/jquery.easing.1.3.umd.min.js"></script>
+
+    <!--/ js script-->
+    <script src="build/js/quotebuilder.js"></script>
+
+</div><!--/wrapper-->
+
+</body>
+</html>
