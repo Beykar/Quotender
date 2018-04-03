@@ -412,21 +412,31 @@ Media Queries
 /*Testimonials Section*/
 
 #testimonials {
-  padding: 150px 0;
+  padding: 130px 0;
 }
 
 #userFeedback {
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
-.infoImgDiv {
-  border: 1px solid red;
+.infoDesc, .infoDiv{
+  margin-top:50px;
+  height: 40vh;
 }
 
-.infoDesc {
-  border: 1px solid red;
+#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
+  font-family: 'fontawesome' !important;
+  font-size: 50px;
+  line-height: 1;
+  opacity: .75;
+  color: #858f8e;
 }
 
+
+
+.fa-quote-left:before{
+  opacity: .3;
+}
 .testQuote{
   color:rgba(81, 196, 188, .2);
   margin-top: 1%;
@@ -439,13 +449,33 @@ Media Queries
 blockquote {
   border: none;
 }
+.blockQuote footer{
+  margin-top:8%;
+  margin-right: 10%;
+  border-top: 1px lighten($pCol,40%) solid;
+  text-align: left;
+  padding-top: 5px;
+}
 
+.blockQuote footer p{
+  font-weight: 600;
+  margin-bottom: -5px;
+  font-size: 13px !important;
+}
+.blockQuote footer cite{
+  font-style:inherit;
+  font-size: 13px !important;
+}
+
+blockquote .small:before, blockquote footer:before, blockquote small:before {
+  content:normal;
+}
 .blockQuote-Footer {
   margin-top: -5%;
 }
 
 .blockQuoteH3{
-  margin-top: -13%;
+  margin-top: -10%;
   text-align: left;
 }
 
@@ -465,6 +495,13 @@ blockquote {
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
+}
+
+.userImg{
+  width: 180px;
+  position: relative;
+  top: -196px;
+  left: 10px;
 }
 
 /****** OUR CLIENTS SECTION *************/
