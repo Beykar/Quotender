@@ -2,13 +2,37 @@
 General
 ***************/
 /*********** SCSS VARIABLES *******/
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Bold/GothamBold.eot");
+  src: url("../fonts/Gotham-Bold/GothamBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold/GothamBold.woff2") format("woff2"), url("../fonts/Gotham-Bold/GothamBold.woff") format("woff"), url("../fonts/Gotham-Bold/GothamBold.ttf") format("truetype"), url("../fonts/Gotham-Bold/GothamBold.svg#GothamBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Black';
+  src: url("../fonts/Gotham-Black/GothamBlack.eot");
+  src: url("../fonts/Gotham-Black/GothamBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Black/GothamBlack.woff2") format("woff2"), url("../fonts/Gotham-Black/GothamBlack.woff") format("woff"), url("../fonts/Gotham-Black/GothamBlack.ttf") format("truetype"), url("../fonts/Gotham-Black/GothamBlack.svg#GothamBlack") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("../fonts/Gotham-Book/Gotham-Book.eot");
+  src: url("../fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*********** END OF SCSS VARIABLES *******/
 /*font-face@font-face {
   font-family: "Gotham Black";
   src:$font-src ;
 }*/
 body {
-  /*font-family: "Gotham";*/ }
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal; }
 
 div {
   /*border: 1px solid red;*/ }
@@ -21,6 +45,7 @@ h1, h2, h3, h4 {
     font-family: "Gotham Black";
     src:$font-src ;
   }*/
+  font-family: "Gotham Black", sans-serif;
   color: #303937; }
 
 h1 {
@@ -32,7 +57,7 @@ h2 {
   font-weight: 900; }
 
 h3 {
-  Font-size: 22px;
+  font-size: 22px;
   Letter-spacing: 2px; }
 
 p {
@@ -401,7 +426,8 @@ blockquote {
 
 .blockQuoteH3 {
   margin-top: -13%;
-  text-align: left; }
+  text-align: left;
+  font-family: "Gotham Book", sans-serif; }
 
 .rateDivContainer {
   display: flex;
