@@ -160,9 +160,10 @@
 
 
            if ($nodeListLength <=0){
+               $("#viewMoreBtn").hide();
                $("#catModal").find('.modal-body').text('No categories to show!');
                $("#catModal").modal('show');
-               $("#viewMoreBtn").style.display = 'none';
+
            } else {
                $('#viewMoreBtn').click(()=> {
                    if ($start < $nodeListLength) {
