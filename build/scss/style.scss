@@ -86,9 +86,8 @@ Buttons
   font-weight: 600;
   box-shadow: 0 5px 0 0 $boxShadowCol;
   cursor: pointer;
-  width: 70%;
   font-size: 18px;
-  min-width: 382px;
+  min-width: 100%;
   min-height: 52px;
 }
 
@@ -108,13 +107,13 @@ Header Section
 ***************/
 
 #headBackground {
-  background: linear-gradient(rgba(247, 247, 247, 0.7), rgba(247, 247, 247, 0.7)),
+  background: linear-gradient(rgba(247, 247, 247, 0.5), rgba(247, 247, 247, 0.5)),
   url("../imgs/head_imgs/tile.jpg")repeat center center;
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
-  background-size: 20%;
+  background-size: 5%;
 }
 
 
@@ -125,6 +124,16 @@ Header Section
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+
+
+.d-flex-direction{
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
 }
 
 
@@ -271,9 +280,6 @@ a.tel-Link:hover {
 Free Quote Section
 ***************/
 
-#innerFreeQuote {
-  padding-top: 180px;
-}
 
 #searchQuote {
   padding-top: 35px;
@@ -287,11 +293,12 @@ Free Quote Section
 .searchBox {
   background-color: #ffffff;
   border: 1px solid $searchCol;
-  box-shadow: 3px 3px 3px $searchCol;
+  box-shadow: 0 1px 11px $searchCol;
   color: $searchCol;
-  width: 95%;
   padding: 6px;
-  Font-size: 18px;
+  font-size: 18px;
+  min-width: 98%;
+  min-height: 54px;
 }
 
 .searchBox, .submitBtn{
@@ -409,29 +416,45 @@ Media Queries
 
 @media screen and (max-width: 992px) {
   .searchBox {
-    width: 70%;
-    margin: 10px 0;
+    margin: 0;
+    min-width: 223px;
   }
   h1 {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.25em;
   }
   h2 {
     font-size: 32px;
   }
+
+  .container{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #headBackground{
+    background-size: 7%;
+  }
+
 }
 
 
 @media screen and (min-width: 992px) {
-  .searchBox {
-    width: 95%;
+
+
+  .container{
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 }
 
 @media screen and (max-width: 560px) {
   h1 {
-    font-size: 32px;
-    line-height: 1.25em;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
   }
 
   h2 {
@@ -439,10 +462,29 @@ Media Queries
   }
 
   #searchQuote {
-    padding-top: 10px;
+    padding-top: 0;
   }
   #headBackground {
     height: 65vh;
+  }
+
+  .d-flex-direction {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitBtn{
+    min-width: 220px;
+  }
+
+  .searchBox{
+    margin: 0 0 23px;
+    min-width: 300px;
+    width: 100%;
   }
 }
 
@@ -581,10 +623,7 @@ blockquote {
   margin:10px 0;
 }
 
-.row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
+
 
 /* Categories Section Media Queries */
 
