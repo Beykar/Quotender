@@ -424,15 +424,6 @@ Media Queries
   height: 40vh;
 }
 
-#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
-  font-family: 'fontawesome' !important;
-  font-size: 50px;
-  line-height: 1;
-  opacity: .75;
-  color: #858f8e;
-}
-
-
 
 .fa-quote-left:before{
   opacity: .3;
@@ -552,9 +543,30 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 /*CATEGORIES Section*/
 
+.panel-heading ul{
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-pane{
+  margin-bottom: 20px;
+}
+
+.cat-container{
+  border: 1px lighten($pCol,30%) solid;
+  border-radius: 5px;
+
+}
 
 
-
+#catModal .modal-body{
+  font-size:24px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 5px;
+  color: darken($pCol, 30%);
+  padding-top: 35px;
+}
 
 #topCats {
   padding: 150px 0;
@@ -686,6 +698,12 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   #cat .slick-prev:before, #cat .slick-next:before{
       font-size: 20px;
   }
+}
+
+
+#viewMoreBtn{
+  width: 295px;
+  height: 59px;
 }
 
 /* bootstrap hack: fix content width inside hidden tabs */
