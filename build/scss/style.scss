@@ -14,6 +14,7 @@ $btnFontCol: #7d9006;
 $boxShadowCol: #a6be02;
 $viewMoreCol: #4dc1ba;
 $searchCol: #f3f3f3;
+$searchColFont: #C7C7CC;
 $red:203;
 $green:236;
 $blue:0;
@@ -208,12 +209,12 @@ Header Section
 #headBackground {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(247, 247, 247, 0.7), rgba(247, 247, 247, 0.7)),
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
   url("../imgs/head_imgs/tile.jpg")repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-size: 6%;
 }
 
 /***************
@@ -355,12 +356,12 @@ Free Quote Section
   background-color: #ffffff;
   border: 1px solid $searchCol;
   box-shadow: 0 3px 2px $searchCol;
-  color: $searchCol;
-  padding: 12px 139px;
+  color: $searchColFont;
+  padding: 12px 18px;
   font-size: 18px;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-right: 20px;
-  min-width: 382px;
+  min-width: 371px;
   min-height: 52px;
 }
 
