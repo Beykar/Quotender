@@ -440,7 +440,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   border-radius: 5px; }
 
 #catModal .modal-body {
-  font-size: 14px;
+  font-size: 24px;
   height: 100px;
   background: #ffffff;
   border-radius: 5px;
