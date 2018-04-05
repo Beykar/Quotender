@@ -4,6 +4,30 @@ General
 
 /*********** SCSS VARIABLES *******/
 
+
+
+$font-family-1: 'gotham', sans-serif;
+/*$font-src:url("../fonts/Gotham Fonts Family");*/
+$hCol:#303937;
+$pCol:#858f8e;
+$bgCol:#cbec00;
+$btnFontCol:#7d9006;
+$boxShadowCol: #a6be02;
+$viewMoreCol:#4dc1ba;
+$searchCol:#cadad5;
+$red:203;
+$green:236;
+$blue:0;
+$alpha:0.7;
+$bgColHover: rgba($red,$green,$blue,$alpha);
+
+
+
+/*********** END OF SCSS VARIABLES *******/
+
+/***********     FONTS    ***************/
+
+
 @font-face {
   font-family: 'Gotham';
   src: url('../fonts/Gotham-Bold/GothamBold.eot');
@@ -40,24 +64,8 @@ General
   font-style: normal;
 }
 
-$font-family-1: 'gotham', sans-serif;
-$font-src:url("../fonts/Gotham Fonts Family");
-$hCol:#303937;
-$pCol:#858f8e;
-$bgCol:#cbec00;
-$btnFontCol:#7d9006;
-$boxShadowCol:#9bb302;
-$viewMoreCol:#4dc1ba;
-$searchCol:#cadad5;
-$red:203;
-$green:236;
-$blue:0;
-$alpha:0.7;
-$bgColHover: rgba($red,$green,$blue,$alpha);
 
 
-
-/*********** END OF SCSS VARIABLES *******/
 
 
 
@@ -70,6 +78,8 @@ body {
   font-size: 16px;
   line-height: 23px;
   font-weight: normal;
+  /*overflow-x: hidden;*/
+
 }
 
 div {
@@ -121,7 +131,53 @@ p{
 Buttons
 ***************/
 
-.submitBtn {
+/***********************
+  RAISED BUTTONS
+************************/
+.submitBtn.pushed {
+  box-shadow: 0 5px 0 0 $boxShadowCol;
+}
+.submitBtn.pushed:active, .submitBtn.pushed.active {
+  background: $bgCol;
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+
+/***********************
+  CUSTOM BTN VALUES
+************************/
+
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+
+}
+
+.submitBtn{
+  background: $bgCol;
+  color: $hCol;
+}
+
+.submitBtn:hover, .submitBtn:active, .submitBtn.active{
+  background: $bgCol;
+  box-shadow: none;
+}
+
+
+.submitBtn:active, .submitBtn.active {
+  background: $bgCol;
+  box-shadow: 0 5px 0 0 $boxShadowCol;
+}
+
+
+/*.submitBtn {
   background-color: $bgCol;
   color: $hCol;
   font-weight: 600;
@@ -130,7 +186,8 @@ Buttons
   font-size: 18px;
   min-width: 100%;
   min-height: 52px;
-}
+  padding: 15px 101px;
+}*/
 
 #viewMoreBtn {
   margin-top: 1%;
@@ -468,11 +525,6 @@ Media Queries
     font-size: 32px;
   }
 
-  .container{
-    margin-right: auto;
-    margin-left: auto;
-  }
-
   #headBackground{
     background-size: 7%;
   }
@@ -483,10 +535,6 @@ Media Queries
 @media screen and (min-width: 992px) {
 
 
-  .container{
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
 }
 
 @media screen and (max-width: 560px) {
