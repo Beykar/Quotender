@@ -736,11 +736,6 @@ and (orientation: portrait) {
     margin-bottom: 0;
   }
 
-  #headBackground {
-    height: 75vh;
-    background-size: 16%;
-  }
-
   h2{
     font-size: 30px;
     line-height: 1.5em;
@@ -749,6 +744,11 @@ and (orientation: portrait) {
   h3{
     font-size: 22px;
     line-height: 1.5em;
+  }
+
+  #headBackground {
+    height: 75vh;
+    background-size: 16%;
   }
 
   .workBox-content{
@@ -772,7 +772,6 @@ and (orientation: portrait) {
   #testimonials{
     padding: 40px 0;
   }
-
 
 }
 
