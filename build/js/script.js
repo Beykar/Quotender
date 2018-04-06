@@ -62,8 +62,11 @@
              infinite: false,
              autoplaySpeed:3000,
              autoplay:true,
-             prevArrow: $('.prev'),
-             nextArrow: $('.next'),
+             arrows:true,
+
+             /* cutomised arrows on slider  */
+             prevArrow:"<button type='button' class='slick-prev'><i class='fa fa-angle-left fa-7x' aria-hidden='true'></i></button>",
+             nextArrow:"<button type='button' class='slick-next'><i class='fa fa-angle-right fa-7x' aria-hidden='true'></i></button>",
 
              // the magic
              responsive: [{
