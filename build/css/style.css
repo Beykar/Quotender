@@ -434,7 +434,7 @@ Media Queries
   border: 1px solid red; }
 
 .infoDesc {
-  border: 1px solid red; }
+  border: none; }
 
 .testQuote {
   color: rgba(81, 196, 188, 0.2);
@@ -451,7 +451,8 @@ blockquote {
 
 .blockQuoteH3 {
   margin-top: -13%;
-  text-align: left; }
+  text-align: left;
+  font-family: "Gotham Book", sans-serif; }
 
 .rateDivContainer {
   display: flex;
@@ -564,7 +565,9 @@ blockquote {
   font-size: 20px;
   line-height: 1;
   opacity: .75;
-  color: #858f8e; }
+  color: #4dc1ba;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /*SLICK ARROWS FOR CATEGORIES SECTION*/
 #cat li.slick-slide.slick-cloned {

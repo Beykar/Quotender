@@ -62,6 +62,8 @@
              infinite: false,
              autoplaySpeed:3000,
              autoplay:true,
+             prevArrow: $('.prev'),
+             nextArrow: $('.next'),
 
              // the magic
              responsive: [{

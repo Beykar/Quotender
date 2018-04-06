@@ -26,6 +26,7 @@ $bgColHover: rgba($red,$green,$blue,$alpha);
 
 
 
+
 /***********     FONTS    ***************/
 
 
@@ -587,7 +588,7 @@ Media Queries
 }
 
 .infoDesc {
-  border: 1px solid red;
+  border: none;
 }
 
 .testQuote{
@@ -610,6 +611,7 @@ blockquote {
 .blockQuoteH3{
   margin-top: -13%;
   text-align: left;
+  font-family: "Gotham Book", sans-serif;
 }
 
 .rateDivContainer {
@@ -763,7 +765,9 @@ blockquote {
   font-size: 20px;
   line-height: 1;
   opacity: .75;
-  color: $pCol;
+  color: $viewMoreCol;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /*SLICK ARROWS FOR CATEGORIES SECTION*/
 
