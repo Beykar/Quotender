@@ -103,7 +103,7 @@ Buttons
 
 .submitBtn {
   background: #cbec00;
-  color: #303937; }
+  color: #7e9003; }
 
 .submitBtn:hover, .submitBtn:active, .submitBtn.active {
   background: #cbec00;
@@ -368,7 +368,7 @@ span.scroll-down {
 
 input[type="text"].searchBox::-webkit-input-placeholder {
   color: #C7C7CC;
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
 
 /***************
 Media Queries
@@ -531,11 +531,29 @@ blockquote {
     display: flex;
     margin-bottom: 0; }
   h1 {
-    margin-top: 20px;
+    margin-top: 38px;
     margin-bottom: 0; }
   #headBackground {
     height: 75vh;
-    background-size: 16%; } }
+    background-size: 16%; }
+  h2 {
+    font-size: 30px;
+    line-height: 1.5em; }
+  h3 {
+    font-size: 22px;
+    line-height: 1.5em; }
+  .workBox-content {
+    padding: 25px;
+    margin: 0; }
+  .workBox {
+    margin: 11% 0; }
+  #innerWork {
+    margin-top: 0;
+    padding-bottom: 0; }
+  #workSteps {
+    padding: 30px 0; }
+  #testimonials {
+    padding: 40px 0; } }
 
 /* Landscape */
 /*CATEGORIES Section*/

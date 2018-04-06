@@ -8,6 +8,7 @@ General
 $font-family-1: 'gotham', sans-serif;
 $font-src:url("../fonts/Gotham Fonts Family");
 $hCol: #303937;
+$submitBtnFontColour: #7e9003;
 $pCol: #858f8e;
 $bgCol: #cbec00;
 $btnFontCol: #7d9006;
@@ -166,7 +167,7 @@ Buttons
 
 .submitBtn{
   background: $bgCol;
-  color: $hCol;
+  color: $submitBtnFontColour;
 }
 
 .submitBtn:hover, .submitBtn:active, .submitBtn.active{
@@ -480,7 +481,7 @@ span.scroll-down{
 
 input[type="text"].searchBox::-webkit-input-placeholder {
   color: #C7C7CC;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 /***************
@@ -731,7 +732,7 @@ and (orientation: portrait) {
   }
 
   h1{
-    margin-top: 20px;
+    margin-top: 38px;
     margin-bottom: 0;
   }
 
@@ -739,6 +740,39 @@ and (orientation: portrait) {
     height: 75vh;
     background-size: 16%;
   }
+
+  h2{
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+
+  h3{
+    font-size: 22px;
+    line-height: 1.5em;
+  }
+
+  .workBox-content{
+    padding: 25px;
+    margin: 0;
+  }
+
+  .workBox{
+    margin: 11% 0;
+  }
+
+  #innerWork {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  #workSteps{
+    padding: 30px 0;
+  }
+
+  #testimonials{
+    padding: 40px 0;
+  }
+
 
 }
 
