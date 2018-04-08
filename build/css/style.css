@@ -342,7 +342,7 @@ Main
 
 div.mouse-container {
   position: relative;
-  display: block;
+  display: flex;
   height: 100px; }
 
 div.mouse {
