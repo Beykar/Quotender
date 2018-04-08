@@ -4,14 +4,17 @@ General
 
 /*********** SCSS VARIABLES *******/
 
+$font-family-1: 'gotham', sans-serif;
 $font-src:url("../fonts/Gotham Fonts Family");
-$hCol:#303937;
+$hCol: #303937;
+$submitBtnFontColour: #7e9003;
 $pCol:#858f8e;
 $bgCol:#cbec00;
-$btnFontCol:#7d9006;
-$boxShadowCol:#9bb302;
+$btnFontCol: #7d9006;
+$boxShadowCol: #a6be02;
 $viewMoreCol:#4dc1ba;
-$searchCol:#cadad5;
+$searchCol: #f3f3f3;
+$searchColFont: #C7C7CC;
 $red:203;
 $green:236;
 $blue:0;
@@ -21,6 +24,47 @@ $bgColHover: rgba($red,$green,$blue,$alpha);
 
 
 /*********** END OF SCSS VARIABLES *******/
+
+
+/***********     FONTS    ***************/
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold/GothamBold.eot');
+  src: url('../fonts/Gotham-Bold/GothamBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gotham-Bold/GothamBold.woff2') format('woff2'),
+  url('../fonts/Gotham-Bold/GothamBold.woff') format('woff'),
+  url('../fonts/Gotham-Bold/GothamBold.ttf') format('truetype'),
+  url('../fonts/Gotham-Bold/GothamBold.svg#GothamBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Black';
+  src: url('../fonts/Gotham-Black/GothamBlack.eot');
+  src: url('../fonts/Gotham-Black/GothamBlack.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gotham-Black/GothamBlack.woff2') format('woff2'),
+  url('../fonts/Gotham-Black/GothamBlack.woff') format('woff'),
+  url('../fonts/Gotham-Black/GothamBlack.ttf') format('truetype'),
+  url('../fonts/Gotham-Black/GothamBlack.svg#GothamBlack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/Gotham-Book/Gotham-Book.eot');
+  src: url('../fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gotham-Book/Gotham-Book.woff2') format('woff2'),
+  url('../fonts/Gotham-Book/Gotham-Book.woff') format('woff'),
+  url('../fonts/Gotham-Book/Gotham-Book.ttf') format('truetype'),
+  url('../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 
