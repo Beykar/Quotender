@@ -412,6 +412,31 @@ Media Queries
   #headBackground {
     height: 65vh; } }
 
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .searchBox {
+    width: 95%;
+    margin: 10px 0 20px 0;
+    min-width: 280px;
+    min-height: 50px; }
+  #searchQuote label {
+    display: flex;
+    margin-bottom: 0; }
+  h1 {
+    margin-top: 38px;
+    margin-bottom: 0; }
+  h2 {
+    font-size: 30px;
+    line-height: 1.5em; }
+  h3 {
+    font-size: 22px;
+    line-height: 1.5em; }
+  #headBackground {
+    height: 75vh;
+    background-size: 16%; } }
+
 /*Testimonials Section*/
 #testimonials {
   padding: 130px 0; }
