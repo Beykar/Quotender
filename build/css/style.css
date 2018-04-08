@@ -2,6 +2,8 @@
 General
 ***************/
 /*********** SCSS VARIABLES *******/
+/*$font-family-1: 'gotham', sans-serif;*/
+/*$font-src:url("../fonts/Gotham Fonts Family");*/
 /*********** END OF SCSS VARIABLES *******/
 /***********     FONTS    ***************/
 @font-face {
@@ -152,7 +154,7 @@ Nav Section
 #topNav {
   background-color: #303937;
   padding: 10px 0;
-  font-family: url("../fonts/Gotham Fonts Family");
+  font-family: "Gotham Bold", sans-serif;
   font-size: 14px; }
 
 .navbar-default .navbar-nav > li > a {
@@ -589,19 +591,27 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 /* Categories Section Media Queries */
 @media screen and (max-width: 768px) {
+  /* #cat{
+     border-top: 1px solid $searchCol;
+     padding:10px 0 0 0;
+   }*/
   #cat {
     border-top: 1px solid #f3f3f3;
-    padding: 10px 0 0 0; }
+    padding: 10px; }
   .cat-container {
-    padding: 0; }
+    padding: 20px; }
   .catDiv {
     padding: 0 0 10px 0;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: none;
     border-left: 1px solid #f3f3f3; }
   .catImg img {
     width: 55px; }
   .catTitle {
-    border-left: 1px solid #f3f3f3; } }
+    border-left: 1px solid #f3f3f3; }
+  .workBox {
+    box-shadow: none;
+    margin-top: 2%;
+    height: auto; } }
 
 /*SLICK ARROWS*/
 #userFeedback .slick-prev, #userFeedback .slick-next {

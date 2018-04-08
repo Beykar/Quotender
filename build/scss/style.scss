@@ -4,30 +4,26 @@ General
 
 /*********** SCSS VARIABLES *******/
 
-$font-family-1: 'gotham', sans-serif;
-$font-src:url("../fonts/Gotham Fonts Family");
+/*$font-family-1: 'gotham', sans-serif;*/
+/*$font-src:url("../fonts/Gotham Fonts Family");*/
 $hCol: #303937;
 $submitBtnFontColour: #7e9003;
-$pCol:#858f8e;
-$bgCol:#cbec00;
+$pCol: #858f8e;
+$bgCol: #cbec00;
 $btnFontCol: #7d9006;
 $boxShadowCol: #a6be02;
-$viewMoreCol:#4dc1ba;
+$viewMoreCol: #4dc1ba;
 $searchCol: #f3f3f3;
 $searchColFont: #C7C7CC;
-$red:203;
-$green:236;
-$blue:0;
-$alpha:0.7;
-$bgColHover: rgba($red,$green,$blue,$alpha);
-
-
+$red: 203;
+$green: 236;
+$blue: 0;
+$alpha: 0.7;
+$bgColHover: rgba($red, $green, $blue, $alpha);
 
 /*********** END OF SCSS VARIABLES *******/
 
-
 /***********     FONTS    ***************/
-
 
 @font-face {
   font-family: 'Gotham';
@@ -64,9 +60,6 @@ $bgColHover: rgba($red,$green,$blue,$alpha);
   font-weight: normal;
   font-style: normal;
 }
-
-
-
 
 /*font-face@font-face {
   font-family: "Gotham Black";
@@ -112,7 +105,7 @@ h3 {
   Letter-spacing: 2px;
 }
 
-p{
+p {
   font-size: 16px !important;
   line-height: 22px;
   color: $pCol !important;
@@ -124,11 +117,9 @@ p{
   text-transform: uppercase;
 }
 
-
 /***************
 Buttons
 ***************/
-
 
 /***********************
   PUSHED BUTTON EFFECT
@@ -137,6 +128,7 @@ Buttons
 .submitBtn.pushed {
   box-shadow: 0 5px 0 0 $boxShadowCol;
 }
+
 .submitBtn.pushed:active, .submitBtn.pushed.active {
   background: $bgCol;
   box-shadow: none;
@@ -162,26 +154,20 @@ Buttons
 
 }
 
-.submitBtn{
+.submitBtn {
   background: $bgCol;
   color: $submitBtnFontColour;
 }
 
-.submitBtn:hover, .submitBtn:active, .submitBtn.active{
+.submitBtn:hover, .submitBtn:active, .submitBtn.active {
   background: $bgCol;
   box-shadow: 0 5px 0 0 $boxShadowCol;
 }
-
 
 .submitBtn:active, .submitBtn.active {
   background: $bgCol;
   box-shadow: 0 5px 0 0 $boxShadowCol;
 }
-
-
-
-
-
 
 /*
 .submitBtn {
@@ -214,26 +200,25 @@ Header Section
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-  url("../imgs/head_imgs/tile.jpg")repeat center center;
+  url("../imgs/head_imgs/tile.jpg") repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: 6%;
 }
 
-
 /***************
 Nav Section
 ***************/
 
 #topNav {
-  background-color:$hCol;
+  background-color: $hCol;
   padding: 10px 0;
-  font-family: $font-src;
+  font-family: "Gotham Bold", sans-serif;
   font-size: 14px;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   cursor: pointer;
 }
 
@@ -246,8 +231,9 @@ a.nav-links:hover {
 }
 
 a.tel-Link {
-  color: $bgCol!important;
+  color: $bgCol !important;
 }
+
 a.tel-Link:hover {
   opacity: 0.8;
 }
@@ -264,7 +250,7 @@ a.tel-Link:hover {
   background-color: #303937;
 }
 
-#nav-icon1{
+#nav-icon1 {
   width: 30px;
   height: 17px;
   position: relative;
@@ -332,11 +318,9 @@ a.tel-Link:hover {
   transform: rotate(-135deg);
 }
 
-
 .navbar-default .navbar-toggle {
   border: none;
 }
-
 
 /***************
 Free Quote Section
@@ -370,7 +354,7 @@ Free Quote Section
   min-height: 52px;
 }
 
-.searchBox, .submitBtn{
+.searchBox, .submitBtn {
   /*margin-left: 2%;
   margin-right: 2%;*/
 }
@@ -378,8 +362,6 @@ Free Quote Section
 #scrollMouse {
   margin: 3%;
 }
-
-
 
 /***************
 Main
@@ -426,32 +408,53 @@ Main
 .boxHeader {
   padding-top: 18px;
 }
+
 /*******************
    Scroll Animation
 ********************/
 
 @-webkit-keyframes scroll-inner {
-  from {margin-top: 15%;}
-  to {margin-top: 150%;}
-}
-@keyframes scroll-inner {
-  from {margin-top: 15%;}
-  to {margin-top: 150%;}
-}
-@-webkit-keyframes scroll-mouse {
-  from {margin-top: 0;}
-  to {margin-top: 15px;}
-}
-@keyframes scroll-mouse {
-  from {margin-top: 0;}
-  to {margin-top: 15px;}
+  from {
+    margin-top: 15%;
+  }
+  to {
+    margin-top: 150%;
+  }
 }
 
-div.mouse-container{
-  position:relative;
-  display:flex;
-  height:100px;
+@keyframes scroll-inner {
+  from {
+    margin-top: 15%;
+  }
+  to {
+    margin-top: 150%;
+  }
 }
+
+@-webkit-keyframes scroll-mouse {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 15px;
+  }
+}
+
+@keyframes scroll-mouse {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 15px;
+  }
+}
+
+div.mouse-container {
+  position: relative;
+  display: flex;
+  height: 100px;
+}
+
 div.mouse {
   position: relative;
   margin: 0 auto;
@@ -466,23 +469,22 @@ div.mouse {
   animation-timing-function: ease;
 }
 
-span.scroll-down{
-  display:block;
-  width:10px;
-  height:10px;
-  background:#fff;
-  border-radius:50%;
-  margin:15% auto auto auto;
+span.scroll-down {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 15% auto auto auto;
 
   -webkit-animation: scroll-inner 1.5s;
   animation: scroll-inner 1.5s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function:ease;
-  animation-timing-function:ease
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease
 
 }
-
 
 /***************
 Media Queries
@@ -500,15 +502,14 @@ Media Queries
   h2 {
     font-size: 32px;
   }
-}
 
+}
 
 @media screen and (min-width: 992px) {
   .searchBox {
     width: 50%;
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 
@@ -517,24 +518,20 @@ Media Queries
     margin: 10px 0;
   }
 
-  .submitBtn{
+  .submitBtn {
     margin-top: 32px;
   }
 
-  h1{
+  h1 {
     font-size: 2.8em;
     line-height: 1.25em;
   }
 
-  #headBackground{
+  #headBackground {
     background-size: 9%;
   }
 
 }
-
-
-
-
 
 @media screen and (max-width: 560px) {
   h1 {
@@ -554,24 +551,15 @@ Media Queries
   }
 }
 
-
-
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
 /* Portrait */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
   .searchBox {
     width: 95%;
@@ -580,22 +568,22 @@ and (orientation: portrait) {
     min-height: 50px;
   }
 
-  #searchQuote label{
+  #searchQuote label {
     display: flex;
     margin-bottom: 0;
   }
 
-  h1{
+  h1 {
     margin-top: 38px;
     margin-bottom: 0;
   }
 
-  h2{
+  h2 {
     font-size: 30px;
     line-height: 1.5em;
   }
 
-  h3{
+  h3 {
     font-size: 22px;
     line-height: 1.5em;
   }
@@ -605,10 +593,7 @@ and (orientation: portrait) {
     background-size: 16%;
   }
 
-
-
 }
-
 
 /*Testimonials Section*/
 
@@ -620,17 +605,17 @@ and (orientation: portrait) {
   margin-top: 70px;
 }
 
-.infoDesc, .infoDiv{
-  margin-top:50px;
+.infoDesc, .infoDiv {
+  margin-top: 50px;
   height: 40vh;
 }
 
-
-.fa-quote-left:before{
+.fa-quote-left:before {
   opacity: .3;
 }
-.testQuote{
-  color:rgba(81, 196, 188, .2);
+
+.testQuote {
+  color: rgba(81, 196, 188, .2);
   margin-top: 1%;
 }
 
@@ -641,32 +626,35 @@ and (orientation: portrait) {
 blockquote {
   border: none;
 }
-.blockQuote footer{
-  margin-top:8%;
+
+.blockQuote footer {
+  margin-top: 8%;
   margin-right: 10%;
-  border-top: 1px lighten($pCol,40%) solid;
+  border-top: 1px lighten($pCol, 40%) solid;
   text-align: left;
   padding-top: 5px;
 }
 
-.blockQuote footer p{
+.blockQuote footer p {
   font-weight: 600;
   margin-bottom: -5px;
   font-size: 13px !important;
 }
-.blockQuote footer cite{
-  font-style:inherit;
+
+.blockQuote footer cite {
+  font-style: inherit;
   font-size: 13px !important;
 }
 
 blockquote .small:before, blockquote footer:before, blockquote small:before {
-  content:normal;
+  content: normal;
 }
+
 .blockQuote-Footer {
   margin-top: -5%;
 }
 
-.blockQuoteH3{
+.blockQuoteH3 {
   margin-top: -10%;
   text-align: left;
   font-family: "Gotham Book", sans-serif;
@@ -677,12 +665,13 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   margin-left: 13px;
 }
 
-.emptyStar{
+.emptyStar {
   background-image: url("../imgs/test_section/star-empty.svg");
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
 }
+
 .fullStar {
   background-image: url("../imgs/test_section/star-full.svg");
   width: 25px;
@@ -690,7 +679,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   background-repeat: no-repeat;
 }
 
-.userImg{
+.userImg {
   width: 180px;
   position: relative;
   top: -196px;
@@ -702,7 +691,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 #our-clients {
   margin-top: -3%;
   padding: 1% 0;
-  background-color:#F9F9F9;
+  background-color: #F9F9F9;
 }
 
 .clientDiv {
@@ -733,7 +722,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   margin: 0 10px;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   #company-clients {
     display: flex;
     list-style: none;
@@ -741,27 +730,25 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   }
 }
 
-
 /*CATEGORIES Section*/
 
-.panel-heading ul{
+.panel-heading ul {
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-.tab-pane{
+.tab-pane {
   margin-bottom: 20px;
 }
 
-.cat-container{
-  border: 1px lighten($pCol,30%) solid;
+.cat-container {
+  border: 1px lighten($pCol, 30%) solid;
   border-radius: 5px;
 
 }
 
-
-#catModal .modal-body{
-  font-size:24px;
+#catModal .modal-body {
+  font-size: 24px;
   height: 100px;
   background: #ffffff;
   border-radius: 5px;
@@ -789,9 +776,8 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   padding: 20px 0;
 }
 
-
-.catTitle{
-  margin:10px 0;
+.catTitle {
+  margin: 10px 0;
 }
 
 .row {
@@ -801,32 +787,41 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 /* Categories Section Media Queries */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    #cat{
-      border-top: 1px solid $searchCol;
-      padding:10px 0 0 0;
-    }
+  /* #cat{
+     border-top: 1px solid $searchCol;
+     padding:10px 0 0 0;
+   }*/
 
-    .cat-container {
-      padding: 0;
-    }
+  #cat {
+    border-top: 1px solid #f3f3f3;
+    padding: 10px;
+  }
 
-    .catDiv{
-      padding: 0 0 10px 0;
-      border-bottom: 1px solid $searchCol;
-      border-left: 1px solid $searchCol;
-    }
+  .cat-container {
+    padding: 20px;
+  }
 
-    .catImg img{
-      width:55px;
-    }
+  .catDiv {
+    padding: 0 0 10px 0;
+    border-bottom: none;
+    border-left: 1px solid $searchCol;
+  }
 
-    .catTitle {
-      border-left: 1px solid $searchCol;
-    }
+  .catImg img {
+    width: 55px;
+  }
+
+  .catTitle {
+    border-left: 1px solid $searchCol;
+  }
+  .workBox {
+    box-shadow: none;
+    margin-top: 2%;
+    height: auto;
+  }
 }
-
 
 /*SLICK ARROWS*/
 
@@ -845,16 +840,17 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   background: white;
 }
 
-#userFeedback .slick-prev:before,#userFeedback .slick-next:before {
+#userFeedback .slick-prev:before, #userFeedback .slick-next:before {
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;
   opacity: .75;
   color: $pCol;
 }
+
 /*SLICK ARROWS FOR CATEGORIES SECTION*/
 
-#cat li.slick-slide.slick-cloned{
+#cat li.slick-slide.slick-cloned {
   width: 75px !important;
 }
 
@@ -865,12 +861,12 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   top: 90%;
   display: block;
   width: 30px;
-  height:30px;
+  height: 30px;
   margin: -10px;
   padding: 0;
   cursor: pointer;
   border: none;
-  background:transparent;
+  background: transparent;
 }
 
 #cat .slick-prev:before, #cat .slick-next:before {
@@ -884,42 +880,39 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (max-width: 922px) {
 
-
-
-@media screen and (max-width: 922px){
-
-  #cat .slick-prev, #cat .slick-next{
-    top:0;
+  #cat .slick-prev, #cat .slick-next {
+    top: 0;
     margin: 10px;
     width: 20px;
-    height:20px;
+    height: 20px;
   }
 
-  #cat .slick-prev:before, #cat .slick-next:before{
-      font-size: 20px;
+  #cat .slick-prev:before, #cat .slick-next:before {
+    font-size: 20px;
   }
 }
 
-
-#viewMoreBtn{
+#viewMoreBtn {
   width: 295px;
   height: 59px;
 }
 
 /* bootstrap hack: fix content width inside hidden tabs */
-#cat.panel.tab-content > .tab-pane{
-  display: block !important;     /* undo display:none          */
-  height: 0 !important;          /* height:0 is also invisible */
+#cat.panel.tab-content > .tab-pane {
+  display: block !important; /* undo display:none          */
+  height: 0 !important; /* height:0 is also invisible */
   overflow-y: hidden !important; /* no-overflow                */
 }
-#cat.panel.tab-content > .active
-{
-  height: auto !important;       /* let the content decide it  */
-} /* bootstrap hack end */
+
+#cat.panel.tab-content > .active {
+  height: auto !important; /* let the content decide it  */
+}
+
+/* bootstrap hack end */
 
 /** end of slick arrows for Categories      ***/
-
 
 /*reasons Section*/
 
@@ -928,14 +921,13 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   background-color: $bgCol;
 }
 
-#innerReasons{
+#innerReasons {
   margin-top: 50px;
 }
 
-.reasonDiv{
+.reasonDiv {
   margin: 30px 0;
 }
-
 
 /******************
   Footer section
@@ -950,7 +942,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   padding-top: 10px;
 }
 
-@media screen and (max-width: 481px){
+@media screen and (max-width: 481px) {
   .footerContent p {
     font-size: 10px !important;
   }
@@ -960,11 +952,10 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
  Pop up Modal Form
 ************************/
 
-#submitPopUpModal{
-  width:100%;
-  height:100%;
+#submitPopUpModal {
+  width: 100%;
+  height: 100%;
 }
-
 
 #msform {
   width: 90%;
@@ -985,10 +976,12 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   /*stacking fieldsets above each other*/
   position: relative;
 }
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
   display: none;
 }
+
 /*inputs*/
 #msform input, #msform textarea {
   padding: 15px;
@@ -1001,6 +994,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   color: #2C3E50;
   font-size: 16px;
 }
+
 /*buttons*/
 #msform .action-button {
   width: 100px;
@@ -1017,7 +1011,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
- background: $bgCol;
+  background: $bgCol;
   box-shadow: 0 3px 0 #9bb302;
 }
 
@@ -1028,12 +1022,14 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   color: $hCol;
   margin-bottom: 10px;
 }
+
 .fs-subtitle {
   font-weight: normal;
   font-size: 13px;
   color: $hCol;
   margin-bottom: 20px;
 }
+
 /*progressbar*/
 #progressbar {
   margin-bottom: 10px;
@@ -1042,6 +1038,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   counter-reset: step;
   padding: 0;
 }
+
 #progressbar li {
   list-style-type: none;
   color: white;
@@ -1051,6 +1048,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   float: left;
   position: relative;
 }
+
 #progressbar li:before {
   content: counter(step);
   counter-increment: step;
@@ -1063,6 +1061,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   border-radius: 50px;
   margin: 0 auto 5px auto;
 }
+
 /*progressbar connectors*/
 #progressbar li:after {
   content: '';
@@ -1074,13 +1073,15 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   top: 9px;
   z-index: -1; /*put it behind the numbers*/
 }
+
 #progressbar li:first-child:after {
   /*connector not needed before the first step*/
   content: none;
 }
+
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
+#progressbar li.active:before, #progressbar li.active:after {
   background: $bgCol;
   color: white;
 }
@@ -1089,24 +1090,25 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   background: none;
 }
 
-.modal-content{
+.modal-content {
   box-shadow: none;
   border-radius: 0;
   border: none;
   background: none;
 }
-.modal-header{
+
+.modal-header {
   background: none;
   border: none;
   margin-top: 23%;
 }
 
-.close{
+.close {
   color: $hCol;
   opacity: 1;
 }
 
-.close :hover{
+.close :hover {
   color: $hCol;
 }
 
@@ -1118,7 +1120,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   width: 100%;
   height: 90vh;
   background: linear-gradient(rgba(247, 247, 247, 0.7), rgba(247, 247, 247, 0.7)),
-  url("../imgs/head_imgs/tile.jpg")repeat center center;
+  url("../imgs/head_imgs/tile.jpg") repeat center center;
 }
 
 
