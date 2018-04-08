@@ -213,10 +213,14 @@ Header Section
 #headBackground {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(247, 247, 247, 0.7), rgba(247, 247, 247, 0.7)),
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
   url("../imgs/head_imgs/tile.jpg")repeat center center;
-;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 6%;
 }
+
 
 /***************
 Nav Section
