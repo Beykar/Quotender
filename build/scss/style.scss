@@ -73,6 +73,10 @@ $bgColHover: rgba($red,$green,$blue,$alpha);
   src:$font-src ;
 }*/
 body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal;
   /*font-family: "Gotham";*/
 }
 
@@ -85,10 +89,11 @@ Headings
 ***************/
 
 h1, h2, h3, h4 {
- /* @font-face {
-    font-family: "Gotham Black";
-    src:$font-src ;
-  }*/
+  /* @font-face {
+     font-family: "Gotham Black";
+     src:$font-src ;
+   }*/
+  font-family: "Gotham Black", sans-serif;
   color: $hCol;
 }
 
@@ -124,6 +129,61 @@ p{
 Buttons
 ***************/
 
+
+/***********************
+  PUSHED BUTTON EFFECT
+************************/
+
+.submitBtn.pushed {
+  box-shadow: 0 5px 0 0 $boxShadowCol;
+}
+.submitBtn.pushed:active, .submitBtn.pushed.active {
+  background: $bgCol;
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+
+/***********************
+  CUSTOM BTN VALUES
+************************/
+
+.btn {
+  padding: 13px 85px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: inherit;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+
+}
+
+.submitBtn{
+  background: $bgCol;
+  color: $submitBtnFontColour;
+}
+
+.submitBtn:hover, .submitBtn:active, .submitBtn.active{
+  background: $bgCol;
+  box-shadow: 0 5px 0 0 $boxShadowCol;
+}
+
+
+.submitBtn:active, .submitBtn.active {
+  background: $bgCol;
+  box-shadow: 0 5px 0 0 $boxShadowCol;
+}
+
+
+
+
+
+
+/*
 .submitBtn {
   background-color: $bgCol;
   color: $hCol;
@@ -133,6 +193,7 @@ Buttons
   width: 70%;
   Font-size: 18px;
 }
+*/
 
 #viewMoreBtn {
   margin-top: 1%;
@@ -516,6 +577,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 .blockQuoteH3{
   margin-top: -10%;
   text-align: left;
+  font-family: "Gotham Book", sans-serif;
 }
 
 .rateDivContainer {

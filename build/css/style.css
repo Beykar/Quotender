@@ -30,6 +30,10 @@ General
   src:$font-src ;
 }*/
 body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal;
   /*font-family: "Gotham";*/ }
 
 div {
@@ -40,9 +44,10 @@ Headings
 ***************/
 h1, h2, h3, h4 {
   /* @font-face {
-    font-family: "Gotham Black";
-    src:$font-src ;
-  }*/
+     font-family: "Gotham Black";
+     src:$font-src ;
+   }*/
+  font-family: "Gotham Black", sans-serif;
   color: #303937; }
 
 h1 {
@@ -70,15 +75,55 @@ p {
 /***************
 Buttons
 ***************/
+/***********************
+  PUSHED BUTTON EFFECT
+************************/
+.submitBtn.pushed {
+  box-shadow: 0 5px 0 0 #a6be02; }
+
+.submitBtn.pushed:active, .submitBtn.pushed.active {
+  background: #cbec00;
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px; }
+
+/***********************
+  CUSTOM BTN VALUES
+************************/
+.btn {
+  padding: 13px 85px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: inherit; }
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none; }
+
 .submitBtn {
-  background-color: #cbec00;
-  color: #303937;
+  background: #cbec00;
+  color: #7e9003; }
+
+.submitBtn:hover, .submitBtn:active, .submitBtn.active {
+  background: #cbec00;
+  box-shadow: 0 5px 0 0 #a6be02; }
+
+.submitBtn:active, .submitBtn.active {
+  background: #cbec00;
+  box-shadow: 0 5px 0 0 #a6be02; }
+
+/*
+.submitBtn {
+  background-color: $bgCol;
+  color: $hCol;
   font-weight: 600;
-  box-shadow: 0 3px 0 #a6be02;
+  box-shadow: 0 3px 0 $boxShadowCol;
   cursor: pointer;
   width: 70%;
-  Font-size: 18px; }
-
+  Font-size: 18px;
+}
+*/
 #viewMoreBtn {
   margin-top: 1%;
   background-color: #ffffff;
@@ -394,7 +439,8 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 .blockQuoteH3 {
   margin-top: -10%;
-  text-align: left; }
+  text-align: left;
+  font-family: "Gotham Book", sans-serif; }
 
 .rateDivContainer {
   display: flex;
