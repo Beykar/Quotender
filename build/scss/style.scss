@@ -343,26 +343,31 @@ Free Quote Section
 ***************/
 
 #innerFreeQuote {
-  padding-top: 180px;
+  padding-top: 0;
 }
 
 #searchQuote {
   padding-top: 35px;
+  display: flex;
+  justify-content: center;
 }
 
 .flexBox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .searchBox {
   background-color: #ffffff;
   border: 1px solid $searchCol;
-  box-shadow: 3px 3px 3px $searchCol;
-  color: $searchCol;
-  width: 95%;
-  padding: 6px;
-  Font-size: 18px;
+  box-shadow: 0 3px 2px $searchCol;
+  color: $searchColFont;
+  padding: 12px 18px;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-right: 20px;
+  min-width: 371px;
+  min-height: 52px;
 }
 
 .searchBox, .submitBtn{
