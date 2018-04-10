@@ -142,17 +142,120 @@
      },//playCatSlider
 
      /**
-      * @name   viewMore
-      * @desc   this function takes an id and a number and starts displaying divs in the id el (e) from starting position (g)
-      * @param e - string
-      * @param g - integer
+      *
+      * @type {boolean}
       */
 
-     viewMore = (e,g) =>{
 
-        let
+
+     viewMore = (e)=>{
+
+
+
+         var
+             $e = e,
+             $nodeList = $(e+ " .catDiv"),
+             $numToShow = 8,
+             $viewMoreBtn = $("#viewMoreBtn"),
+             $nodeListLength = $nodeList.length,
+             $isShowing = true,
+             $catModal = $("#catModal");
+
+
+
+         if ($nodeListLength <=0){
+             $viewMoreBtn.hide();
+             $catModal.find('.modal-body').text('No categories to show!');
+             $catModal.modal('show');
+
+         } else {
+
+             $nodeList.hide();
+             if ($nodeListLength > $numToShow) {
+                 $viewMoreBtn.show();
+                 $viewMoreBtn.val('View More');
+             }
+             $nodeList.slice(0, $numToShow).show();
+             $viewMoreBtn.click(function () {
+                 var $showing = $nodeList.filter(':visible').length;
+                 if ($isShowing) {
+                     $nodeList.slice($showing - 1, $showing + $numToShow).fadeIn(400, onFadeComplete);
+                 }
+                 else {
+
+
+                     if ($showing % 2 !== 0) {
+                            console.log("odd showing : "+$showing);
+                            console.log("odd showing remainder : "+ $showing%2);
+                            $difference = $showing - ($showing % 2);
+                            $nodeList.slice($showing - ($numToShow + $showing % 2), $nodeListLength).fadeOut(500, onFadeComplete);
+                     }
+                     else {
+                         $nodeList.slice($showing - $numToShow, $nodeListLength).fadeOut(400, onFadeComplete);
+                     }
+
+
+                     /*
+                      console.log($nodeListLength);
+                      console.log($remainder);
+                      $nodeList.slice($showing - $numToShow, $remainder).fadeOut(400, onFadeComplete);
+*/
+
+
+                     /*  panelOffset    = $nodeList.offset();
+                       panelHeight    = $nodeList.height();
+                       buttonOffset   = $viewMoreBtn.offset();
+                       buttonHeight   = $viewMoreBtn.height();
+                       showingOffset = $nodeList.slice(0,$showing).offset();
+                       showingHeight = $nodeList.slice(0,$showing).height();
+                       console.log("panel offset : "+ panelOffset.top);
+                       console.log("button offset : "+ buttonOffset.top);
+                       console.log("showing  offset: "+ showingOffset.top);
+                       console.log("showing  offset height: "+ showingHeight);
+                       console.log("panel height :"+panelHeight);
+                       console.log("button height: "+buttonHeight);
+                       console.log("B offest - p height: "+ (buttonOffset.top - panelHeight));
+                       /!*window.scrollTo(0,(showingOffset.top + showingHeight + buttonHeight));*!/
+                       scrollTop:(showingOffset.top - buttonHeight);
+                       alert('youre here');*/
+
+                 }
+
+             });
+
+         }
+
+
+
+      onFadeComplete =()=> {
+                 var $nowShowing = $nodeList.filter(':visible').length;
+                 console.log($nodeList);
+
+                 console.log("nowshowing: " + $nowShowing);
+
+                 if ($nowShowing == $nodeListLength && $isShowing) {
+                         $isShowing = false;
+                         $catModal.find('.modal-body').text('No More categories to show!');
+                         $catModal.modal('show');
+                         $viewMoreBtn.val("View Less");
+                 }
+                 else if ($isShowing) {
+                     $viewMoreBtn.text("Show More");
+                 }
+
+                 if ($nowShowing == $numToShow) {
+                     $viewMoreBtn.val("View More");
+                     $isShowing = true;
+                 }
+
+             }
+
+}, //viewMore
+
+        /*let
             $start = g-1;
 
+            console.log("this i start first time around at the top of viewmore: " + $start);
 
             $nodeList = $(e+ " .catDiv");
             $nodeListLength = $nodeList.length;
@@ -167,21 +270,29 @@
            } else {
                $('#viewMoreBtn').click(()=> {
                    if ($start < $nodeListLength) {
-
+                       $("#viewMoreBtn").val('View More');
                        $(e + ' .catDiv:lt(' + ($start + 9) + '):gt(' + $start + ')').fadeIn("slow");
                        $start += 8;
+                       console.log("after the click, start is : " + $start);
                        }
                    if ($start > $nodeListLength){
-                       $("#viewMoreBtn").hide();
+                       console.log('after view less start is: ' + $start);
                        $("#catModal").find('.modal-body').text('No More categories to show!');
                        $("#catModal").modal('show');
+                       $("#viewMoreBtn").val('View Less');
                        $start = g-1;
+                       console.log("g - 1 =: ", $start);
+
+                       $("#viewMoreBtn").on('click', ()=>{
+                           showMoreCats();
+                           $start -= g-1;
+                           console.log("start after click view less: " + $start);
+                       });
 
                }
 
                });
-           }
-     }, //viewMore
+           }*/
 
 
      /**
@@ -191,6 +302,7 @@
 
 
      showMoreCats = () =>{
+
 
          //Showing the first 8  elements with class .catDiv in #a-panel as default
 
@@ -202,25 +314,23 @@
                     onDisplay = $("#"+$panelID + " .catDiv:lt(8)").show();
 
                     startPoint = onDisplay.length;
-                    console.log(startPoint);
+                   /* console.log(startPoint);*/
 
-                    viewMore("#"+$panelID, startPoint);
+                    viewMore("#"+$panelID);
 
              // grabbing the target id of the tab clicked then using it to display the first 8 elements with class .catDiv
              $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
-                 $('#viewMoreBtn').show();
+                 let
+                    $target = $(e.target).attr("href"); // activated tab
+                    console.log($target);
+                    $($target + " .catDiv").hide();
 
                  let
-                     $target = $(e.target).attr("href"); // activated tab
-                 console.log($target);
-                 $($target + " .catDiv").hide();
+                    onDisplay = $($target + " .catDiv:lt(8)").show();
 
-                 let
-                     onDisplay = $($target + " .catDiv:lt(8)").show();
-
-                 startPoint = onDisplay.length;
-                 viewMore($target, startPoint);
+                    startPoint = onDisplay.length;
+                    viewMore($target);
 
              });
 

@@ -699,7 +699,7 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 }
 
 .trustQuote {
-  border: 1px solid red;
+
   color: $searchCol;
 }
 
@@ -821,6 +821,11 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
     margin-top: 2%;
     height: auto;
   }
+}
+
+#catModal span{
+  color: $searchCol;
+  margin-right: -15px;
 }
 
 /*SLICK ARROWS*/

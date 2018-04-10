@@ -522,7 +522,6 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
   padding-top: 10px; }
 
 .trustQuote {
-  border: 1px solid red;
   color: #f3f3f3; }
 
 .trustQuote p {
@@ -612,6 +611,10 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
     box-shadow: none;
     margin-top: 2%;
     height: auto; } }
+
+#catModal span {
+  color: #f3f3f3;
+  margin-right: -15px; }
 
 /*SLICK ARROWS*/
 #userFeedback .slick-prev, #userFeedback .slick-next {
