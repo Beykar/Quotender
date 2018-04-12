@@ -778,14 +778,16 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 /*headings*/
 .fs-title {
+  font-family: 'Gotham', sans-serif;
   font-size: 18px;
   text-transform: capitalize;
   color: #303937;
   margin-bottom: 10px; }
 
 .fs-subtitle {
+  font-family: 'Gotham Book', sans-serif;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 14px;
   color: #303937;
   margin-bottom: 20px; }
 
@@ -860,9 +862,6 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 
 .close :hover {
   color: #303937; }
-
-#quote {
-  margin-top: 10%; }
 
 #headBackgroundModal {
   width: 100%;
